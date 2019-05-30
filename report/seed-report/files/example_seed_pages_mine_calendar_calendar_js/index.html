@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - example/seed/pages/mine/calendar/calendar.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">报告首页</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>example/seed/pages/mine/calendar/calendar.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">代码可维护性 <a href="https://avandeursen.com/2014/08/29/think-twice-before-using-the-maintainability-index/"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="取值范围0-100；分值越高表示代码可维护性越强；0-10表示低可维护性，10-20表示中等可维护性，20-100表示高可维护性" data-original-title="代码可维护性，点击问号有详细说明"  data-container="body"></i></a></h2>
+      <p class="stat">65.05</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">代码行数 <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">137</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">难度  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="难度表示程序编写或阅读的难易程度，分值越高表示越难编写或阅读" data-original-title="难度" data-container="body"></i></a></h2>
+      <p class="stat">33.14</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">预估错误  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="根据Halstead模型得出的潜在bug数，点击问号有详细说明" data-original-title="预估bug数" data-container="body"></i></a></h2>
+      <p class="stat">1.01</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">函数权重</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">依据复杂度 <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="代码块中入口至出口间路径数，例：没有if语句，顺序执行，值为1；if语句一个条件，值为2。点击问号有详细说明" data-original-title="圈复杂度" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">依据逻辑代码行数  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">import initCalendar, { getSelectedDay, setTodoLabels } from &#039;../../../template/calendar/index&#039;;
+let qcloud = require(&#039;../../../vendor/wafer2-client-sdk/index&#039;)
+let config = require(&#039;../../../config&#039;)
+let util = require(&#039;../../../utils/util.js&#039;)
+let app = getApp()
+
+Page({
+ data: {
+   initCalendarDone: false,
+   signinDone: false,
+   signinDays: []
+ },
+
+  signin: function () {
+    var that = this
+    let date = new Date()
+    if (!that.data.signinDone) {
+      qcloud.request({
+        login: true,
+        url: `${app.appData.baseUrl}signin`,
+        method: &#039;POST&#039;,
+        data: {
+          date: util.formatDate(date)
+        },
+        success: res =&gt; {
+          console.log(&#039;[signin][success]&#039;, res)
+          that.setData({
+            signinDone: true
+          })
+          let data = that.data.signinDays
+          data.push({
+            year: String(date.getFullYear()),
+            month: String(date.getMonth() + 1),
+            day: String(date.getDate())
+          })
+          setTodoLabels({
+            pos: &#039;bottom&#039;,
+            dotColor: &#039;#40&#039;,
+            days: data,
+          })
+          that.setData({
+            signinDays: data 
+          })
+          util.showSuccess(&#039;签到成功！&#039;)
+        },
+        fail: err =&gt; {
+          console.log(&#039;[signin][fail]&#039;, err)
+          util.showSuccess(&#039;签到失败！&#039;)
+        },
+        complete: res =&gt; {
+        }
+      })
+    }else{
+      util.showSuccess(&#039;已签到~&#039;)
+    }
+  },
+
+  onShow: function () {
+    let that = this
+    wx.showLoading({
+      title: &#039;加载中...&#039;,
+    })
+    initCalendar({
+      multi: false, // 是否开启多选,
+      // disablePastDay: true, // 是否禁选过去日期
+      // defaultDay: &#039;2018-8-8&#039;, // 初始化日历时指定默认选中日期，如：&#039;2018-3-6&#039; 或 &#039;2018-03-06&#039;
+      /**
+       * 选择日期后执行的事件
+       * @param { object } currentSelect 当前点击的日期
+       * @param { array } allSelectedDays 选择的所有日期（当mulit为true时，才有allSelectedDays参数）
+       */
+      afterTapDay: (currentSelect, allSelectedDays) =&gt; {
+        console.log(&#039;===============================&#039;);
+        console.log(&#039;当前点击的日期&#039;, currentSelect);
+        console.log(&#039;当前点击的日期是否有事件标记: &#039;, currentSelect.hasTodo || false);
+        allSelectedDays &amp;&amp; console.log(&#039;选择的所有日期&#039;, allSelectedDays);
+        console.log(&#039;getSelectedDay方法&#039;, getSelectedDay());
+      },
+      /**
+       * 日期点击事件（此事件会完全接管点击事件）
+       * @param { object } currentSelect 当前点击的日期
+       * @param { object } event 日期点击事件对象
+       */
+      // onTapDay(currentSelect, event) {
+      //   console.log(currentSelect);
+      //   console.log(event);
+      // },
+      /**
+       * 日历初次渲染完成后触发事件，如设置事件标记
+       */
+      afterCalendarRender() {
+        const data = []
+        qcloud.request({
+          login: true,
+          url: `${app.appData.baseUrl}signin`,
+          method: &#039;POST&#039;,
+          data: {
+            all: true
+          },
+          success: res =&gt; {
+            let currentDate = new Date()
+            for (let i = 0; i &lt; res.data.data.length; i++) {
+              let date = new Date(res.data.data[i].date)
+              data.push({
+                year: String(date.getFullYear()),
+                month: String(date.getMonth() + 1),
+                day: String(date.getDate())
+              })
+              if (currentDate.getFullYear() == date.getFullYear() &amp;&amp; currentDate.getMonth() == date.getMonth() &amp;&amp; currentDate.getDate() == date.getDate()) {
+                that.setData({
+                  signinDone: true
+                })
+              }
+            }
+            setTodoLabels({
+              pos: &#039;bottom&#039;,
+              dotColor: &#039;#40&#039;,
+              days: data,
+            });
+            that.setData({
+              signinDays: data
+            })
+          },
+          fail: err =&gt; {
+            console.log(&#039;[getAllSigninDays][fail]&#039;, err)
+          },
+          complete: res =&gt; {
+            that.setData({
+              initCalendarDone: true
+            })
+            wx.hideLoading()
+          }
+        })
+      },
+    });
+  }
+});</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ cyclomatic }} <br>
+    Length : {{ halstead.length }} <br>
+    Difficulty : {{ halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>

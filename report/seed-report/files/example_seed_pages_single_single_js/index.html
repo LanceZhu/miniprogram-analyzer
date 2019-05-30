@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - example/seed/pages/single/single.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">报告首页</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>example/seed/pages/single/single.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">代码可维护性 <a href="https://avandeursen.com/2014/08/29/think-twice-before-using-the-maintainability-index/"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="取值范围0-100；分值越高表示代码可维护性越强；0-10表示低可维护性，10-20表示中等可维护性，20-100表示高可维护性" data-original-title="代码可维护性，点击问号有详细说明"  data-container="body"></i></a></h2>
+      <p class="stat">67.17</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">代码行数 <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">278</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">难度  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="难度表示程序编写或阅读的难易程度，分值越高表示越难编写或阅读" data-original-title="难度" data-container="body"></i></a></h2>
+      <p class="stat">38.86</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">预估错误  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="根据Halstead模型得出的潜在bug数，点击问号有详细说明" data-original-title="预估bug数" data-container="body"></i></a></h2>
+      <p class="stat">2.75</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">函数权重</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">依据复杂度 <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="代码块中入口至出口间路径数，例：没有if语句，顺序执行，值为1；if语句一个条件，值为2。点击问号有详细说明" data-original-title="圈复杂度" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">依据逻辑代码行数  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">var qcloud = require(&#039;../../vendor/wafer2-client-sdk/index.js&#039;)
+var util = require(&#039;../../utils/util.js&#039;)
+var config = require(&#039;../../config.js&#039;)
+var app = getApp()
+var timerCountdown = &#039;&#039;
+Page({
+  data: {
+    question: &#039;&#039;, //信道服务请求
+    ask: {},
+    question_counts: 0,
+    question_options: {},
+    countdown: 0,
+    answerColor: &#039;&#039;,
+    clickIndex: &#039;&#039;,
+    localClick: false,
+    winWidth: 0,
+    winHeight: 0,
+    ratio: 0,
+    chapters: [
+      { chapter: &quot;Arduino语言介绍&quot;, chapterId: 1, checked: 0 },
+      { chapter: &quot;变量&quot;, chapterId: 2, checked: 0 },
+      { chapter: &quot;运算符&quot;, chapterId: 3,checked: 0 },
+      { chapter: &quot;控制语句&quot;, chapterId: 4,checked: 0 },
+      { chapter: &quot;数组&quot;, chapterId: 5, checked: 0 },
+      { chapter: &quot;函数（一）&quot;, chapterId: 6, checked: 0 },
+      { chapter: &quot;函数（二）&quot;, chapterId: 7,checked: 0 },
+      { chapter: &quot;指针&quot;, chapterId: 8, checked: 0 },
+      { chapter: &quot;类和对象&quot;, chapterId: 9, checked: 0 },
+    ],
+    chapters_chosen: false,
+    recommendationDone: false
+  },
+  onLoad: function (options) {
+    var that = this;
+    wx.setNavigationBarTitle({
+      title: options.title
+    });
+    that.setData({
+      winHeight: wx.getStorageSync(&#039;winHeight&#039;),
+      winWidth: wx.getStorageSync(&#039;winWidth&#039;),
+      ratio: wx.getStorageSync(&#039;ratio&#039;)
+    })
+    if(options.fromBasicDetail){
+      that.setData({
+        chapters_chosen: true,
+        question_counts: options.question_counts,
+        question_options: {
+          &#039;chapterId&#039;: options.chapterId,
+          &#039;unitId&#039;: options.nameId,
+          &#039;counts&#039;: options.question_counts
+        }
+      })
+      that.connect()
+    }
+  },
+
+  onReady: function () {
+  },
+  onShow: function () {
+    this.setData({
+      countdown: 0
+    })
+    if(app.tunnel &amp;&amp; app.tunnel.isActive()){
+      app.tunnel.close()
+    }
+  },
+  onHide: function () {
+    clearInterval(timerCountdown)
+  },
+  onUnload: function () {
+    this.quit()
+    clearInterval(timerCountdown)
+  },
+  onShareAppMessage: function () {
+    return {
+      title: &quot;碎片时间学编程&quot;,
+      path: &quot;/pages/main/main&quot;
+    };
+  },
+
+  connect() {
+    wx.showLoading({
+      title: &#039;加载中...&#039;
+    })
+    var that =this
+    that.quit()
+
+    var tunnel = that.tunnel = new qcloud.Tunnel(config.service.tunnelSingle)
+    tunnel.on(&#039;connect&#039;, () =&gt; { console.log(&#039;信道连接成功&#039;)})
+    tunnel.on(&#039;close&#039;, () =&gt; { console.log(&#039;信道关闭&#039;)})
+    tunnel.on(&#039;reconnecting&#039;, () =&gt; console.log(&#039;信道断开连接，正在重连&#039;))
+    tunnel.on(&#039;reconnect&#039;, () =&gt; console.log(&#039;信道重连成功&#039;))
+    tunnel.on(&#039;error&#039;, () =&gt; console.log(&#039;信道连接发生错误&#039;))
+    tunnel.on(&#039;connected&#039;,(res) =&gt; {
+      tunnel.emit(&#039;ask&#039;, that.data.question_options)
+      wx.hideLoading()
+    })
+    //监听服务器端发送过来的问题
+    tunnel.on(&#039;sendQuestion&#039;, (res) =&gt; {
+      console.log(&#039;收到题目&#039;,res)
+      let question = res.question
+      if (Object.getOwnPropertyNames(question).length) {
+        question.answer = JSON.parse(question.answer)//将答案转换为js对象
+        var ask = app.towxml.toJson(question.ask, &#039;markdown&#039;, that)
+        ask.theme = &#039;min&#039;
+        that.setData({
+          ask: ask
+        })
+        //错题解析使用
+        var right_answer = &#039;&#039;
+        for (let i = 0; i &lt; question.answer.length; i++) {
+          if (question.answer[i].right == 1) {
+            right_answer = question.answer[i].answer
+          }
+        }
+        wx.setStorage({
+          key: &#039;last_question&#039;,
+          data: question,
+        })
+      }
+      if (Object.getOwnPropertyNames(question).length) {
+        that.setData({
+          question
+        })
+        //错题解析
+        wx.setStorage({
+          key: &#039;ask&#039;,
+          data: ask,
+        })
+        wx.setStorage({
+          key: &#039;analysis&#039;,
+          data: question.analysis,
+        })
+        wx.setStorage({
+          key: &#039;right_answer&#039;,
+          data: right_answer,
+        })
+        that.reset()//运行重置函数
+      } else {
+        util.showSuccess(&#039;已无推荐题目&#039;)
+        that.setData({
+          recommendationDone: true
+        })
+        console.log(&#039;已无推荐题目&#039;)
+        that.tunnel.close()
+      }
+
+    })
+
+    //信道连接
+    tunnel.open()
+  },
+
+  //定义重置函数
+  reset: function () {
+    var that = this
+    clearInterval(timerCountdown)
+    that.setData({
+      countdown: 0,
+      localClick: false
+    })
+    timerCountdown = setInterval(function () {
+      let countdown = that.data.countdown
+      countdown++
+      that.setData({
+        countdown
+      })
+    }, 1000)
+  },
+
+  /**
+   * 提交问题
+   * e 答题情况
+   */
+  answer: function (e) {
+    var that = this;
+    if (that.tunnel.isClosed()) {
+      util.showSuccess(&#039;已无推荐题目！&#039;)
+    }
+    if(!that.data.localClick){
+      if (e.currentTarget.dataset.right) {
+        that.setData({
+          answerColor: &#039;right&#039;, 
+          clickIndex: e.currentTarget.dataset.index
+        });
+        setTimeout(function(){
+          that.sendAnswer(that,true)
+        },1000)
+      } else {
+        that.setData({
+          answerColor: &#039;error&#039;,
+          clickIndex: e.currentTarget.dataset.index
+        });
+        setTimeout(function () {
+          that.sendAnswer(that, false)
+          wx.navigateTo({
+            url: &#039;./tutorial/tutorial?id=&#039;+that.data.question.id+&#039;&amp;chapter_id=&#039;+that.data.chapter_id+&#039;&amp;unit_id=&#039;+that.data.unit_id
+          })
+        }, 1000)
+      };
+      that.setData({
+        localClick: true
+      });
+    };
+  },
+
+  //退出专属题场
+  quit() {
+    if (this.tunnel &amp;&amp; this.tunnel.isActive()) {
+      this.tunnel.close();
+      console.log(&#039;信道关闭&#039;)
+    }
+  },
+
+//提交请求
+  sendAnswer: function(that,right){
+    var date = new Date()
+    console.log(util.formatTime(date))
+    that.tunnel.emit(&#039;answer&#039;,{
+      id: that.data.question.id,
+      chapterId: that.data.question.chapter_id,
+      unitId: that.data.question.unit_id,
+      time: that.data.countdown,
+      datetime: util.formatTime(date),
+      right: right,
+      ask: that.data.question.ask
+    })
+    that.setData({
+      answerColor: &#039;&#039;,
+      clickIndex: &#039;&#039;,
+      localClick: false,
+    })
+  },
+
+  checkboxChange: function(e){
+    var values = e.detail.value;
+    var chapters = this.data.chapters;
+    console.log(&#039;[选项]&#039;,values)
+    for (var i = 0; i &lt; chapters.length; i++) {
+      chapters[i].checked = false;
+      for (var j = 0; j &lt; values.length; j++) {
+        if (chapters[i].chapter == values[j]) {
+          chapters[i].checked = true;
+        }
+      }
+    }
+
+    this.setData({
+      chapters: chapters,
+    })
+  },
+
+  chapter_submit: function(){
+    var that = this
+    that.setData({
+      chapters_chosen: true
+    })
+    var chapter
+    var chapter_chosen = []
+    for(chapter in that.data.chapters){
+      if(that.data.chapters[chapter].checked){
+        chapter_chosen.push(that.data.chapters[chapter].chapterId)
+      }
+    }
+    if(chapter_chosen.length == 0){
+      chapter_chosen = [1,2,3,4,5,6,7,8,9]
+    }
+    console.log(chapter_chosen)
+    that.setData({
+      question_options: {
+        &#039;chapterId&#039;: chapter_chosen,
+        &#039;unitId&#039;: false,
+        &#039;counts&#039;: false
+      }
+    })
+    that.connect()
+  }
+})</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ cyclomatic }} <br>
+    Length : {{ halstead.length }} <br>
+    Difficulty : {{ halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - app.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">Report Home</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>app.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
+      <p class="stat">73.03</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">213</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
+      <p class="stat">26.97</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
+      <p class="stat">1.64</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">Function weight</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">By Complexity <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="This metric counts the number of distinct paths through a block of code. Lower values are better." data-original-title="Cyclomatic Complexity" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">By SLOC  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">var qcloud = require(&#039;./vendor/wafer2-client-sdk/index&#039;);
+var config = require(&#039;./config&#039;);
+var util = require(&#039;./utils/util.js&#039;)
+const Session = require(&#039;./vendor/wafer2-client-sdk/lib/session.js&#039;)
+const Towxml = require(&#039;/towxml/main&#039;)
+
+App({
+    towxml: new Towxml,
+    appData: {
+      appId: config.service.appId,
+      baseUrl: `${config.service.host}/weapp/`,
+      tunnelStatus: &#039;close&#039;,//统一管理唯一的信道连接的状态：connect、close、reconnecting、reconnect、error
+      friendsFightingRoom: undefined,//好友对战时创建的唯一房间名,作为好友匹配的标识
+      opt: &#039;&#039;, // 包含 shareTicket 好友匹配时判断是否分享到群
+      openId: &#039;&#039;,
+      currentClickId: &#039;&#039;,// 每个用户一个ClickId 分享时使用
+    },
+
+    globalData: {
+      userInfo: null
+    },
+    
+    lodash: {
+      forEach: require(&quot;./utils/lodash.foreach/index.js&quot;),
+    },
+
+    onLaunch: function (opt) {
+      this.appData.opt = opt
+      qcloud.setLoginUrl(config.service.loginUrl);
+      if(Session.get()){
+        this.globalData.userInfo = Session.get().userinfo // 判断用户是否登录
+      }
+    },
+    onShow: function(opt){
+      console.log(&#039;[app]opt:&#039;, opt)
+      this.storeUser_network(opt)//每次打开程序都启动存储用户关系表
+    },
+
+    /**
+     * page中调用获取用户信息
+     */
+    pageGetUserInfo(page, openIdReadyCallback) {
+      let userInfo = this.globalData.userInfo
+      //已有userInfo直接使用，否则调用userInfoReadyCallBack(再所需page中定义)
+      if (userInfo) {
+        page.setData({
+          userInfo,
+          openId: userInfo.openId
+        })
+        this.appData.openId = userInfo.openId;
+        if (openIdReadyCallback) {
+          console.log(&#039;[app][pageGetUserInfo][openIdReadyCallback]&#039;)
+          openIdReadyCallback(userInfo.openId);
+        }
+      } else {
+        this.userInfoReadyCallback = (userInfo) =&gt; {
+          page.setData({
+            userInfo,
+            openId: userInfo.openId
+          })
+        }
+        if (openIdReadyCallback) {
+          console.log(&#039;[app][pageGetUserInfo][openIdReadyCallback]&#039;)
+          openIdReadyCallback(openId)
+        }
+      }
+    },
+
+    /**
+     * 创建一个tunnel，监听相关数据变化
+     */
+    tunnelCreate() {
+      const that = this // that表示app=getApp()
+      if (that.tunnel &amp;&amp; that.tunnel.isActive()) {
+        that.tunnel.close();
+        console.log(&#039;信道关闭&#039;)
+      }
+      const tunnel = that.tunnel = new qcloud.Tunnel(config.service.tunnelGame)
+      tunnel.on(&#039;connect&#039;, () =&gt; {
+        console.info(&quot;[app][tunnelCreate]tunnelStatus=&#039;connect&#039;&quot;)
+        this.appData.tunnelStatus = &#039;connect&#039;
+        if (that.tunnelConnectCallback) {
+          that.tunnelConnectCallback()
+        }
+      })
+      tunnel.on(&#039;close&#039;, () =&gt; {
+        console.info(&quot;[app][tunnelCreate]tunnelStatus=&#039;close&#039;&quot;)
+        this.appData.tunnelStatus = &#039;close&#039;
+        if (that.tunnelCloseCallBack) {
+          taht.tunnelCloseCallBack
+        }
+      })
+      tunnel.on(&#039;reconnecting&#039;, () =&gt; {
+        console.info(&quot;[app][tunnelCreate]tunnelStatus=&#039;reconnecting&quot;)
+        this.appData.tunnelStatus = &#039;reconnecting&#039;
+        if (that.tunnelReconnectingCallback) {
+          that.tunnelReconnectingCallback()
+        }
+      })
+      tunnel.on(&#039;reconnect&#039;, () =&gt; {
+        console.info(&quot;[app][tunnelCreate]tunnelStatus=&#039;reconnect&#039;&quot;)
+        console.info(&#039;重连后的信道为:&#039; + tunnel.socketUrl.slice(tunnel.socketUrl.indexOf(&#039;tunnelId=&#039;) + 9, tunnel.socketUrl.indexOf(&#039;&amp;&#039;)))
+        this.appData.tunnelStatus = &#039;reconnect&#039;
+        if (that.tunnelReconnectCallback) {//设置回调
+          that.tunnelReconnectCallback()
+        }
+      })
+      tunnel.on(&#039;error&#039;, () =&gt; {
+        console.info(&quot;[app][tunnelCreate]tunnelStatus = &#039;error&#039;&quot;)
+        this.appData.tunnelStatus = &#039;error&#039;
+        util.showSuccess(&#039;您已断线，请检查联网&#039;)
+        wx.navigateBack({
+          url: &#039;../main/main&#039;
+        })
+        if (that.tunnelErrorCallback) {
+          that.tunnelErrorCallback()
+        }
+      })
+      //PING-PONG机制：监听服务器PING
+      tunnel.on(&#039;PING&#039;, () =&gt; {//PING-PONG机制:监听服务器PING
+        console.info(&quot;接收到PING&quot;)
+        tunnel.emit(&#039;PONG&#039;, {//给出回应
+          openId: this.appData.openId
+        })
+        console.info(&quot;发出了PONG&quot;)
+      })
+      tunnel.open()
+    },
+
+
+  /******************用户关系点击表操作******************/
+  //注意1：所有从分享中启动的页面onLoad都添加：  
+  /*
+    app.appData.fromClickId = opt.currentClickId
+    app.upDateUser_networkFromClickId = require(&#039;../../utils/upDateUser_networkFromClickId.js&#039;).upDateUser_networkFromClickId
+    wx.showShareMenu({
+      withShareTicket: true
+    })
+  */
+  //注意2：所有分享页面路径都添加：?currentClickId=&#039; + app.appData.currentClickId,
+  //注意3：所有分享页面的分享成功回调都添加： require(&#039;../../utils/upDateShareInfoToUser_network.js&#039;).upDateShareInfoToUser_network(app,that,res)
+
+  storeUser_network(opt) { // 从微信群中打开程序
+    const that = this
+    const userInfo = that.globalData.userInfo
+    if (userInfo) {//已缓存的用户数据直接用
+      getGId(that, userInfo, opt)
+    } else {
+      this.userInfoReadyCallback = (userInfo) =&gt; {  //获取用户信息后的回调函数
+        getGId(that, userInfo, opt)
+      }
+    }
+    function getGId(that, userInfo, opt) {
+      //判断是否是从微信群内打开该程序的
+      if(opt.shareTicket){
+        wx.getShareInfo({
+          shareTicket: opt.shareTicket,
+          //含GId的情况
+          success: (res) =&gt; {
+            console.log(&#039;[app][getGid] success&#039;)
+            qcloud.request({
+              login: false,
+              data: {
+                appId: that.appData.appId,
+                openId: userInfo.openId,
+                encryptedData: res.encryptedData,
+                iv: res.iv
+              },
+              url: `${that.appData.baseUrl}getGId`,
+              success: (res) =&gt; {
+                let GId = res.data.data
+                store(that, userInfo, opt, GId)
+              }
+            })
+          },
+          //不含GId的情况
+          fail: function (res) {
+            store(that, userInfo, opt)
+          }
+        })
+      }
+    }
+    function store(that, userInfo, opt, GId = &#039;&#039;) {  //参数内要写that：that作为一个对象不能凭空产生
+      let data = {
+        //clickId:自动生成的数据, table user_network clickId自增获得
+        fromClickId: that.appData.fromClickId ? that.appData.fromClickId : 0,//从哪个clickId那里打开的
+        appId: that.appData.appId,
+        openId: userInfo.openId,
+        fromGId: GId,
+        scene: opt.scene,
+        //time:自动生成的数据, table user_network time格式timestamp
+        //param_1:转发时才会更新当前clickId中的param_1数据
+      }
+      //将数据存储到数据库点击表中,同时将得到的clickId放在全局变量供page分享时调用
+      qcloud.request({
+        login: false,
+        data,
+        url: `${that.appData.baseUrl}storeUserNetwork`,// 路径为storeUserNetwork暂不使用
+        success: (res) =&gt; {
+          let currentClickId = res.data.data
+          console.log(&#039;[app][currentClickId]&#039;, currentClickId)
+          that.appData.currentClickId = currentClickId//设置当前新插入的clickId为全局fromClickId
+          let fromClickId = that.appData.fromClickId
+          if (that.upDateUser_networkFromClickId &amp;&amp; fromClickId) {//存在fromClickId，则进行数据库更新
+            console.log(&#039;[app]upDateUser_networkFromClickId success&#039;)
+            that.upDateUser_networkFromClickId(that, currentClickId, fromClickId)
+          }
+        }
+      });
+    }
+  },
+  /******************用户关系点击表操作******************/
+});</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ cyclomatic }} <br>
+    Length : {{ halstead.length }} <br>
+    Difficulty : {{ halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>

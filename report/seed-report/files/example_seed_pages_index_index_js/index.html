@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - example/seed/pages/index/index.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">报告首页</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>example/seed/pages/index/index.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">代码可维护性 <a href="https://avandeursen.com/2014/08/29/think-twice-before-using-the-maintainability-index/"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="取值范围0-100；分值越高表示代码可维护性越强；0-10表示低可维护性，10-20表示中等可维护性，20-100表示高可维护性" data-original-title="代码可维护性，点击问号有详细说明"  data-container="body"></i></a></h2>
+      <p class="stat">78.10</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">代码行数 <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">280</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">难度  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="难度表示程序编写或阅读的难易程度，分值越高表示越难编写或阅读" data-original-title="难度" data-container="body"></i></a></h2>
+      <p class="stat">21.72</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">预估错误  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="根据Halstead模型得出的潜在bug数，点击问号有详细说明" data-original-title="预估bug数" data-container="body"></i></a></h2>
+      <p class="stat">1.53</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">函数权重</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">依据复杂度 <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="代码块中入口至出口间路径数，例：没有if语句，顺序执行，值为1；if语句一个条件，值为2。点击问号有详细说明" data-original-title="圈复杂度" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">依据逻辑代码行数  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">/**
+ * @fileOverview 演示会话服务和 WebSocket 信道服务的使用方式
+ */
+
+// 引入 QCloud 小程序增强 SDK
+var qcloud = require(&#039;../../vendor/wafer2-client-sdk/index&#039;);
+
+// 引入配置
+var config = require(&#039;../../config&#039;);
+
+// 显示繁忙提示
+var showBusy = text =&gt; wx.showToast({
+    title: text,
+    icon: &#039;loading&#039;,
+    duration: 10000
+});
+
+// 显示成功提示
+var showSuccess = text =&gt; wx.showToast({
+    title: text,
+    icon: &#039;success&#039;
+});
+
+// 显示失败提示
+var showModel = (title, content) =&gt; {
+    wx.hideToast();
+
+    wx.showModal({
+        title,
+        content: JSON.stringify(content),
+        showCancel: false
+    });
+};
+
+/**
+ * 使用 Page 初始化页面，具体可参考微信公众平台上的文档
+ */
+Page({
+
+    /**
+     * 初始数据，我们把服务地址显示在页面上
+     */
+    data: {
+        loginUrl: config.service.loginUrl,
+        requestUrl: config.service.requestUrl,
+        tunnelUrl: config.service.tunnelUrl,
+        uploadUrl: config.service.uploadUrl,
+        tunnelStatus: &#039;closed&#039;,
+        tunnelStatusText: {
+            closed: &#039;已关闭&#039;,
+            connecting: &#039;正在连接...&#039;,
+            connected: &#039;已连接&#039;
+        },
+        imgUrl: &#039;&#039;
+    },
+
+    /**
+     * 点击「登录」按钮，测试登录功能
+     */
+    bindGetUserInfo: function (e) {
+        showBusy(&#039;正在登录&#039;);
+
+        const session = qcloud.Session.get()
+
+        if (session) {
+            // 第二次登录
+            // 或者本地已经有登录态
+            // 可使用本函数更新登录态
+            qcloud.loginWithCode({
+                success: res =&gt; {
+                    this.setData({ userInfo: res, logged: true })
+                    showSuccess(&#039;登录成功&#039;)
+                },
+                fail: err =&gt; {
+                    console.error(err)
+                    showModel(&#039;登录错误&#039;, err.message)
+                }
+            })
+        } else {
+            // 首次登录
+            qcloud.login({
+                success: res =&gt; {
+                    this.setData({ userInfo: res, logged: true })
+                    showSuccess(&#039;登录成功&#039;)
+                },
+                fail: err =&gt; {
+                    console.error(err)
+                    showModel(&#039;登录错误&#039;, err.message)
+                }
+            })
+        }
+    },
+
+    /**
+     * 点击「清除会话」按钮
+     */
+    clearSession() {
+        // 清除保存在 storage 的会话信息
+        qcloud.clearSession();
+        showSuccess(&#039;会话已清除&#039;);
+    },
+
+    /**
+     * 点击「请求」按钮，测试带会话请求的功能
+     */
+    doRequest() {
+        showBusy(&#039;正在请求&#039;);
+
+        // qcloud.request() 方法和 wx.request() 方法使用是一致的，不过如果用户已经登录的情况下，会把用户的会话信息带给服务器，服务器可以跟踪用户
+        qcloud.request({
+            // 要请求的地址
+            url: this.data.requestUrl,
+
+            // 请求之前是否登陆，如果该项指定为 true，会在请求之前进行登录
+            login: true,
+
+            success(result) {
+                showSuccess(&#039;请求成功完成&#039;);
+                console.log(&#039;request success&#039;, result);
+            },
+
+            fail(error) {
+                showModel(&#039;请求失败&#039;, error);
+                console.log(&#039;request fail&#039;, error);
+            },
+
+            complete() {
+                console.log(&#039;request complete&#039;);
+            }
+        });
+    },
+
+    doUpload () {
+        var that = this
+
+        wx.chooseImage({
+          count: 1,
+          sizeType: [&#039;compressed&#039;],
+          sourceType: [&#039;album&#039;, &#039;camera&#039;],
+          success: function(res){
+            var filePath = res.tempFilePaths[0]
+
+            wx.uploadFile({
+              url: that.data.uploadUrl,
+              filePath: filePath,
+              name: &#039;file&#039;,
+
+              success: function(res){
+                showSuccess(&#039;上传图片成功&#039;)
+                res = JSON.parse(res.data)
+                console.log(res)
+                that.setData({
+                    imgUrl: res.data.imgUrl
+                })
+              },
+
+              fail: function(e) {
+                console.error(e)
+              }
+            })
+
+          },
+          fail: function(e) {
+            console.error(e)
+          }
+        })
+    },
+
+    previewImage () {
+        wx.previewImage({
+            current: this.data.imgUrl,
+            urls: [this.data.imgUrl]
+        })
+    },
+
+    switchTunnel(e) {
+        const turnedOn = e.detail.value;
+
+        if (turnedOn &amp;&amp; this.data.tunnelStatus == &#039;closed&#039;) {
+            this.openTunnel();
+
+        } else if (!turnedOn &amp;&amp; this.data.tunnelStatus == &#039;connected&#039;) {
+            this.closeTunnel();
+        }
+    },
+
+    /**
+     * 点击「打开信道」，测试 WebSocket 信道服务
+     */
+    openTunnel() {
+        // 创建信道，需要给定后台服务地址
+        var tunnel = this.tunnel = new qcloud.Tunnel(this.data.tunnelUrl);
+
+        // 监听信道内置消息，包括 connect/close/reconnecting/reconnect/error
+        tunnel.on(&#039;connect&#039;, () =&gt; {
+            console.log(&#039;WebSocket 信道已连接&#039;);
+            this.setData({ tunnelStatus: &#039;connected&#039; });
+        });
+
+        tunnel.on(&#039;close&#039;, () =&gt; {
+            console.log(&#039;WebSocket 信道已断开&#039;);
+            this.setData({ tunnelStatus: &#039;closed&#039; });
+        });
+
+        tunnel.on(&#039;reconnecting&#039;, () =&gt; {
+            console.log(&#039;WebSocket 信道正在重连...&#039;)
+            showBusy(&#039;正在重连&#039;);
+        });
+
+        tunnel.on(&#039;reconnect&#039;, () =&gt; {
+            console.log(&#039;WebSocket 信道重连成功&#039;)
+            showSuccess(&#039;重连成功&#039;);
+        });
+
+        tunnel.on(&#039;error&#039;, error =&gt; {
+            showModel(&#039;信道发生错误&#039;, error);
+            console.error(&#039;信道发生错误：&#039;, error);
+        });
+
+        // 监听自定义消息（服务器进行推送）
+        tunnel.on(&#039;speak&#039;, speak =&gt; {
+            showModel(&#039;信道消息&#039;, speak);
+            console.log(&#039;收到说话消息：&#039;, speak);
+        });
+
+        // 打开信道
+        tunnel.open();
+
+        this.setData({ tunnelStatus: &#039;connecting&#039; });
+    },
+
+    /**
+     * 点击「发送消息」按钮，测试使用信道发送消息
+     */
+    sendMessage() {
+        // 使用 tunnel.isActive() 来检测当前信道是否处于可用状态
+        if (this.tunnel &amp;&amp; this.tunnel.isActive()) {
+            // 使用信道给服务器推送「speak」消息
+            this.tunnel.emit(&#039;speak&#039;, {
+                &#039;word&#039;: &#039;I say something at &#039; + new Date(),
+            });
+        }
+    },
+
+    /**
+     * 点击「测试重连」按钮，测试重连
+     * 也可以断开网络一段时间之后再连接，测试重连能力
+     */
+    testReconnect() {
+        // 不通过 SDK 关闭连接，而是直接用微信断开来模拟连接断开的情况下，考察 SDK 自动重连的能力
+        wx.closeSocket();
+    },
+
+    /**
+     * 点击「关闭信道」按钮，关闭已经打开的信道
+     */
+    closeTunnel() {
+        if (this.tunnel) {
+            this.tunnel.close();
+        }
+
+        this.setData({ tunnelStatus: &#039;closed&#039; });
+    },
+
+    /**
+     * 点击「聊天室」按钮，跳转到聊天室综合 Demo 的页面
+     */
+    openChat() {
+        // 微信只允许一个信道再运行，聊天室使用信道前，我们先把当前的关闭
+        this.closeTunnel();
+        wx.navigateTo({ url: &#039;../chat/chat&#039; });
+    },
+
+    /**
+     * 跳转到seed
+     */
+    openSeed() {
+      wx.navigateTo({ url: &#039;../main/main&#039; });
+    },
+});</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ cyclomatic }} <br>
+    Length : {{ halstead.length }} <br>
+    Difficulty : {{ halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - example/seed/pages/main/main.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">报告首页</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>example/seed/pages/main/main.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">代码可维护性 <a href="https://avandeursen.com/2014/08/29/think-twice-before-using-the-maintainability-index/"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="取值范围0-100；分值越高表示代码可维护性越强；0-10表示低可维护性，10-20表示中等可维护性，20-100表示高可维护性" data-original-title="代码可维护性，点击问号有详细说明"  data-container="body"></i></a></h2>
+      <p class="stat">77.50</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">代码行数 <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">78</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">难度  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="难度表示程序编写或阅读的难易程度，分值越高表示越难编写或阅读" data-original-title="难度" data-container="body"></i></a></h2>
+      <p class="stat">14.76</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">预估错误  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="根据Halstead模型得出的潜在bug数，点击问号有详细说明" data-original-title="预估bug数" data-container="body"></i></a></h2>
+      <p class="stat">0.76</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">函数权重</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">依据复杂度 <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="代码块中入口至出口间路径数，例：没有if语句，顺序执行，值为1；if语句一个条件，值为2。点击问号有详细说明" data-original-title="圈复杂度" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">依据逻辑代码行数  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">var qcloud = require(&#039;../../vendor/wafer2-client-sdk/index&#039;);
+var config = require(&#039;../../config&#039;);
+var util = require(&#039;../../utils/util.js&#039;)
+var app =getApp()
+
+Page({
+  data: {
+    items: [{ &#039;title&#039;: &#039;新知学习&#039;, &#039;content&#039;: &#039;知识点+题&#039;, &#039;desc&#039;: &#039;basic&#039;, &#039;src&#039;: &#039;/images/icons/KnowledgePoint.png&#039; },
+    { &#039;title&#039;: &#039;专属题场&#039;, &#039;content&#039;: &#039;刷题&#039;, &#039;desc&#039;: &#039;single&#039;, &#039;src&#039;: &#039;/images/icons/exercise.png&#039; },
+    { &#039;title&#039;: &#039;双人PK&#039;, &#039;content&#039;: &#039;PK&#039;, &#039;desc&#039;: &#039;double&#039;, &#039;src&#039;: &#039;/images/icons/PK.png&#039; },
+    { &#039;title&#039;: &#039;个人中心&#039;, &#039;content&#039;: &#039;用户&#039;, &#039;desc&#039;: &#039;mine&#039;, &#039;src&#039;: &#039;/images/icons/user.png&#039; },
+    ],
+    winWidth: 0,
+    winHeight: 0,
+    ratio: 0,
+    userInfo: {},
+    res: &#039;&#039;
+  },
+
+  navigateToDetail: function(e){
+    var urlName = e.currentTarget.dataset.desc
+    var urlTitle = e.currentTarget.dataset.title
+    wx.navigateTo({
+      url: &#039;../&#039;+urlName+&#039;/&#039;+urlName+&#039;?title=&#039;+urlTitle,
+    })
+  },
+
+  onLoad: function (options) {
+    var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        console.log(&#039;[main][winHeight]&#039;+res.windowHeight);
+        console.log(&#039;[main][winWidth]&#039; + res.windowWidth);
+        console.log(&#039;[main][ratio]&#039; + 750 / res.windowWidth);
+        that.setData({
+          winWidth: res.windowWidth,
+          winHeight: res.windowHeight,
+          ratio: 750 / res.windowWidth
+        });
+        wx.setStorageSync(&#039;winHeight&#039;, res.windowHeight);
+        wx.setStorageSync(&#039;winWidth&#039;, res.windowWidth);
+        wx.setStorageSync(&#039;ratio&#039;, 750/res.windowWidth);
+      }
+    })
+    //判断用户是否登录
+    if (!app.globalData.userInfo) {
+      wx.navigateTo({
+        url: &quot;/pages/authorize/authorize&quot;
+      })
+      console.log(&#039;[main]login please&#039;)
+    } else {
+      console.log(&#039;[main]login success&#039;)
+    }
+    wx.showShareMenu({
+      withShareTicket: true
+    })
+  },
+  onReady: function () {},
+  onShow: function () {
+    this.closeTunnel()
+  },
+  onHide: function () {},
+  onUnload: function () {},
+  onPullDownRefresh: function () {},
+  onReachBottom: function () {},
+  onShareAppMessage: function () {
+    return {
+      title: &quot;碎片时间学编程&quot;,
+      path: &quot;/pages/main/main&quot;
+    };
+  },
+  closeTunnel() {
+    //当信道连接或者重连了时，关闭已连接的信道
+    if (app.appData.tunnelStatus === &#039;connect&#039; || app.appData.tunnelStatus === &#039;reconnect&#039;) {
+      app.tunnel.close();
+    }
+  }
+})</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ cyclomatic }} <br>
+    Length : {{ halstead.length }} <br>
+    Difficulty : {{ halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>

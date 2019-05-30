@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - example/seed/pages/double/fighting_room/fighting_room.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">报告首页</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>example/seed/pages/double/fighting_room/fighting_room.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">代码可维护性 <a href="https://avandeursen.com/2014/08/29/think-twice-before-using-the-maintainability-index/"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="取值范围0-100；分值越高表示代码可维护性越强；0-10表示低可维护性，10-20表示中等可维护性，20-100表示高可维护性" data-original-title="代码可维护性，点击问号有详细说明"  data-container="body"></i></a></h2>
+      <p class="stat">66.73</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">代码行数 <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">318</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">难度  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="难度表示程序编写或阅读的难易程度，分值越高表示越难编写或阅读" data-original-title="难度" data-container="body"></i></a></h2>
+      <p class="stat">44.30</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">预估错误  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="根据Halstead模型得出的潜在bug数，点击问号有详细说明" data-original-title="预估bug数" data-container="body"></i></a></h2>
+      <p class="stat">2.64</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">函数权重</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">依据复杂度 <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="代码块中入口至出口间路径数，例：没有if语句，顺序执行，值为1；if语句一个条件，值为2。点击问号有详细说明" data-original-title="圈复杂度" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">依据逻辑代码行数  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">const qcloud = require(&#039;../../../vendor/wafer2-client-sdk/index&#039;)
+const config = require(&#039;../../../config&#039;)
+const util = require(&#039;../../../utils/util.js&#039;)
+const app = getApp()
+const option = {
+  CHOICE_DELAY_SHOW: 1500,//选项延时1.5S显示
+}
+
+Page({
+  data: {
+    roomName: &#039;&#039;,//对战房间号
+    userInfo_me: &#039;&#039;, //本人用户信息
+    userInfo_others: &#039;&#039;,//对手用户信息
+    countdown: 20,//倒计时
+    question: &#039;&#039;,//websocket服务器传过来的问题及答案
+    ask: {},//md转为wxml后的问题
+    hasClick: false,//判断是否已选答案，不能重新选择
+    localClick: false,//是否本地单击的答案
+    tunnelIdReplacing: 0,//tunnelIdReplacing存在2种转态：0表示不存在信道替换，1表示信道正在替换中:禁止发送数据
+    clickIndex: &#039;&#039;,//判断用户选择了哪个答案
+    answerColor: &#039;&#039;,//根据选择正确与否给选项添加背景颜色
+    scoreMyself: 0,//自己的总分
+    status_users_others: {
+      openId: &#039;&#039;, //对手的openid
+      userChoose: &#039;&#039;,//对手选择了第几项
+      answerColor: &#039;&#039;,//对手是否选择正确
+    },//对手的答题状态
+    score_others: 0,//对手的总分
+    game_over: false,  //判断此次PK是否结束
+    win: 2,  //0:表示输，1：表示赢,2:表示平手
+    sendNumber: 0,//每一轮的答题次数不能超过1次
+    winHeight: 0,
+    winWidth: 0,
+    ratio: 0,
+    friends_match: 0
+  },
+  onLoad(options) {
+    var that = this
+    that.setData({
+      winHeight: wx.getStorageSync(&#039;winHeight&#039;),
+      winWidth: wx.getStorageSync(&#039;winWidth&#039;),
+      ratio: wx.getStorageSync(&#039;ratio&#039;)
+    })
+    if(options.friends_match == &#039;1&#039;){
+      that.setData({
+        friends_match: 1
+      })
+    }
+    app.appData.fromClickId = options.currentClickId
+    app.upDateUser_networkFromClickId = require(&#039;../../../utils/upDateUser_networkFromClickId.js&#039;).upDateUser_networkFromClickId
+    wx.showShareMenu({
+      withShareTicket: true
+    })
+    this.setData({
+      roomName: options.roomName,
+      userInfo_me: wx.getStorageSync(&#039;user_me&#039;),
+      userInfo_others: wx.getStorageSync(&#039;user_others&#039;),
+    })
+    wx.removeStorageSync(&#039;user_me&#039;)//清理缓存
+    wx.removeStorageSync(&#039;user_others&#039;)//清理缓存
+    this.startAnimate()//定义开始动画
+    this.fightingReady(options.roomName) //通知服务器我已准备好了
+    this.exceptionalListener()  //监听异常情况，如断线重新连接  
+  },
+  onUnload(){
+    //this.quit()
+  },
+  onShareAppMessage(res) {
+    const that = this;
+    return {
+      title: &#039;谁才是头脑王者？比比看吧！&#039;,
+      path: `/pages/main/main?currentClickId=${app.appData.currentClickId}`,
+      success(res) {
+        //转发时向用户关系表中更新一条转发记录(个人为person，群为GId)。
+        require(&#039;../../../utils/upDateShareInfoToUser_network.js&#039;).upDateShareInfoToUser_network(app, that, res)
+        wx.redirectTo({
+          url: &#039;../../main/main&#039;
+        })
+      }
+    }
+  },
+  fightingReady(roomName) { //通知服务器我已准备好了
+    const that = this
+    const tunnel = that.tunnel = app.tunnel
+    //tunnel.emit(&#039;has_ready&#039;, { roomName })//通知服务器，已经准备好可以答题了 //直接发送延时显示题目
+
+    //监听是否在重连,若是，则禁止发送数据到后台
+    app.tunnelReconnectingCallback = () =&gt; {
+      that.setData({
+        tunnelIdReplacing: 1,//tunnelIdReplacing存在2种转态：0表示不存在信道替换，1表示信道正在替换中 
+      })
+    }
+    //监听后台是否收到前端发送的选项 收到回复后锁定已选答案
+    tunnel.on(&#039;getAnswer&#039;, (res) =&gt; {
+      that.setData({//答题后将hasClick设置为true,防止重新选择答案
+        hasClick: true
+      })
+    })
+    //监听逃跑者的信息
+    tunnel.on(&#039;runawayNotice&#039;, (res) =&gt; {
+      console.log(&#039;对手已逃跑&#039;)
+      util.showSuccess(res.message)
+      that.setData({
+        game_over: true,
+        win: 1,
+      })
+      app.tunnel.close()
+    })
+
+    //监听服务器端发送过来的问题
+    let getNextQuestions, timerCountdown, timerReset  //定义倒计时定时器，定义重置定时器(注意：只有将timer_countdown定义在最外边才能清除掉上一个定时器)
+    tunnel.on(&#039;sendQuestion&#039;, (res) =&gt; {
+      console.log(&#039;收到题目&#039;, res.question)
+      let question = res.question
+      if (Object.getOwnPropertyNames(question).length) {
+        question.answer = JSON.parse(question.answer)//将答案转换为js对象
+        var ask = app.towxml.toJson(question.ask, &#039;markdown&#039;, that)
+        ask.theme = &#039;min&#039;
+        that.setData({
+          ask: ask
+        })
+      }
+      //获取对手的答题情况并显示
+      if (res.choicePlayer1[0] !== that.data.userInfo_me.openId) {
+        that.setData({
+          status_users_others: {
+            openId: res.choicePlayer1[0],
+            userChoose: res.choicePlayer1[1],
+            answerColor: res.choicePlayer1[2],
+          },
+          score_others: res.choicePlayer1[3],//对手总分单独拎出来，不更新
+          animate_rightAnswer: &#039;right&#039;,//显示正确答案
+        })
+      } else {
+        that.setData({
+          status_users_others: {
+            openId: res.choicePlayer2[0],
+            userChoose: res.choicePlayer2[1],
+            answerColor: res.choicePlayer2[2],
+          },
+          score_others: res.choicePlayer2[3],//对手总分单独拎出来，不更新
+          animate_rightAnswer: &#039;right&#039;,//显示正确答案
+        })
+      }
+
+      clearTimeout(getNextQuestions) // 2s显示下一题
+
+      // 双方答题情况显示2s,根据题目剩余情况选择显示下一题或结束
+      if (Object.getOwnPropertyNames(question).length) {
+        getNextQuestions = setTimeout(function () { //先等待2s查看对方的选择状态，再开始下一题
+          reset(that)//运行重置函数
+        }, 2000)
+      } else {  //当question中无问题时即question={},即回答完所有问题
+        getNextQuestions = setTimeout(function () { //答完题显示战果 0:输 1:赢 2:平
+          if (that.data.scoreMyself &gt; that.data.score_others) {
+            that.setData({
+              game_over: true,
+              win: 1,
+            })
+          } else if (that.data.scoreMyself &lt; that.data.score_others) {
+            that.setData({
+              game_over: true,
+              win: 0,
+            })
+          }
+          else {
+            that.setData({
+              game_over: true
+            })
+          }
+          //将当前用户的比赛结果发送给服务器
+          tunnel.emit(&#039;fightingResult&#039;, {
+            openId: that.data.userInfo_me.openId,
+            fightingResult: that.data.win
+          })
+        }, 2000)
+      }
+
+      function reset(that) {//定义重置函数
+        //获取新题目后,倒计时归为10，将clickIndex清空，hasClick改为未选择.
+        that.setData({
+          question,//更新题目
+          animate_showChoice: &#039;&#039;,
+          countdown: 20,
+          localClick: false,
+          hasClick: false,
+          clickIndex: &#039;&#039;,
+          answerColor: &#039;&#039;,
+          //scoreMyself: 0,
+          status_users_others: {
+            openId: &#039;&#039;,
+            userChoose: &#039;&#039;,
+            answerColor: &#039;&#039;,
+            //scoreMyself: 0,
+          },
+          sendNumber: 0,
+          animate_rightAnswer: &#039;&#039;,
+        })
+        //（重新）开始倒计时
+        clearInterval(timerCountdown)//获取新题目后,倒计时定时器清空(注意：只有将timer_countdown定义在最外边才能清除掉上一个定时器)
+        let countdown = that.data.countdown;
+        setTimeout(() =&gt; {//2S后显示选项和开始倒计时
+          that.setData({ animate_showChoice: &#039;fadeIn&#039; })
+          timerCountdown = setInterval(function () {
+            countdown--
+            that.setData({
+              countdown
+            })
+            if (countdown == 0) {
+              clearInterval(timerCountdown)
+            }
+          }, 1000)
+        }, option.CHOICE_DELAY_SHOW)
+
+        //（重新）设置定时器，若用户未选择答案，10s后也将用户结果发给服务器
+        clearTimeout(timerReset);
+        timerReset = setTimeout(() =&gt; {
+          if (!that.data.localClick &amp;&amp; !that.data.hasClick) {
+            that.sendAnswer(that)
+          }
+        }, 21000)
+      }
+    })
+  },
+  answer(e) {//开始答题
+    const that = this
+    if (!that.data.localClick) {  //防止重新选择答案
+      if (e.currentTarget.dataset.right) {//判断答案是否正确
+        that.setData({
+          clickIndex: e.currentTarget.dataset.index,
+          answerColor: &#039;right&#039;
+        })
+        //答对了则加分，时间越少加分越多,总分累加
+        that.setData({
+          scoreMyself: that.data.scoreMyself + that.data.countdown * 5
+        })
+      } else {
+        that.setData({
+          clickIndex: e.currentTarget.dataset.index,
+          answerColor: &#039;error&#039;
+        })
+      }
+      that.setData({
+        localClick: true//本地已经点击,若hasClick仍未false，则说明没有发送数据出去
+      })
+      that.sendAnswer(that)
+    }
+  },
+  //ping-pong机制，监听前端是否与服务端保持长连接,防止答题期间的卡死问题
+  sendAnswer(that) {//若存在信道替换，且信道替换还未完成，则不发送数据到后台，但是本地还是算点击一次,
+    if (that.data.sendNumber &gt; 0) {
+      return
+    }
+    if (that.data.tunnelIdReplacing == 1 || !(app.appData.tunnelStatus == &#039;connect&#039; || app.appData.tunnelStatus == &#039;reconnect&#039;)) {//当信道正在替换中时，禁止发送数据
+      return
+    }
+    that.tunnel.emit(&#039;answer&#039;, {  //将选项、是否正确、总分3项发送给服务器，若双方都已发送，服务器直接返回下一题
+      roomName: that.data.roomName,
+      choice: {
+        openId: that.data.userInfo_me.openId,
+        userChoose: that.data.clickIndex,
+        answerColor: that.data.answerColor,
+        scoreMyself: that.data.scoreMyself,
+      }
+    })
+    let sendNumber = that.data.sendNumber + 1//BUG:保证每一轮发送次数不能大于1，至于为什么会大于1，暂时不清楚原因
+    that.setData({
+      sendNumber,
+    })
+  },
+  //异常处理：重新连接、网络错误
+  exceptionalListener() {
+    const that = this
+    const tunnel = this.tunnel = app.tunnel
+    //重新连接后，信道id会改变,通知服务器信道id已改变，待接收到服务器端信道ID已替换的通知后再将选项发送给服务器
+    app.tunnelReconnectCallback = () =&gt; {
+      //信道id完成替换后，将本地的userInfo_me中的tunnel_id进行更新
+      tunnel.on(&#039;tunnelIdReplaced&#039;, (res) =&gt; {//监听信道替换成功
+        let userInfo_me = that.data.userInfo_me
+        userInfo_me.tunnel_id = res.newTunnelId
+        that.setData({//更新当前用户的信道idh和信道替换状态
+          userInfo_me,
+          tunnelIdReplacing: 0
+        })
+        if (that.data.localClick &amp;&amp; !that.data.hasClick) {//如果本地已点击过，并且还没发送成功，则向服务器再次发送数据
+          that.sendAnswer(that)
+        }
+      })
+    }
+  },
+  continue_fighting(e) {
+    if(e.currentTarget.dataset.friends_match){
+      wx.reLaunch({
+        url: &#039;../../main/main&#039;,
+      })
+    }else{
+      wx.navigateBack({})
+    }
+  },
+  startAnimate() {
+    const that = this
+    that.setData({
+      zoomIn: &#039;zoomIn&#039;
+    })
+    setTimeout(function () {
+      that.setData({
+        zoomOut: &#039;zoomOut&#039;
+      })
+    }, 1500)
+  },
+
+  quit: function () {
+    if (app.tunnel &amp;&amp; app.tunnel.isActive()) {
+      app.tunnel.close()
+      console.log(&#039;[tunnelGame][close]&#039;)
+    }
+  }
+})</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ cyclomatic }} <br>
+    Length : {{ halstead.length }} <br>
+    Difficulty : {{ halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>

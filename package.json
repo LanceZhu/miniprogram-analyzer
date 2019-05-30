@@ -1,0 +1,30 @@
+{
+  "name": "plato-mini-program",
+  "version": "0.0.1",
+  "description": "mini-program analyzer based on plato",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "program": "node index.js",
+    "snippet": "node snippet.js"
+  },
+  "keywords": [
+    "mini-program",
+    "plato"
+  ],
+  "author": "LanceZhu",
+  "license": "MIT",
+  "dependencies": {
+    "plato": "git+https://github.com/LanceZhu/plato.git#template-zh-CN"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^6.1.4"
+  }
+}

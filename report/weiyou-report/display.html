@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - JavaScript Introspection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <script>
+    var __options = {"title":"plato mini program","flags":{"complexity":{"commonjs":true,"logicalor":true,"switchcase":true,"forin":false,"trycatch":false,"newmi":true},"jshint":{}}}
+  </script>
+
+  <link href="assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="assets/css/plato.css" rel="stylesheet">
+  <link href="assets/css/plato-display.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>plato mini program</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="reportBlock lineCount">
+                <div class="reportContent">
+                    <small class="chart-label">总/平均代码行数</small>
+                    <h1>537 / 89</h1>
+                </div>
+                <div id="chart_historical_sloc" class="chart js-chart"></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="reportBlock maintainability">
+                <div class="reportContent">
+                    <small class="chart-label">平均代码可维护性</small>
+                    <h1>80.67</h1>
+                </div>
+                <div id="chart_historical_maint" class="chart js-chart"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="reportBlock maintainabilityList">
+                <h2 class="reportTitle">最差代码可维护性得分</h2>
+                <ul class="list-unstyled">
+
+                    <li>
+                        <strong>66 score</strong>
+                        <small>example/weiyou/utils/util.js</small>
+                    </li>
+
+                    <li>
+                        <strong>71 score</strong>
+                        <small>example/weiyou/pages/index/index.js</small>
+                    </li>
+
+                    <li>
+                        <strong>72 score</strong>
+                        <small>example/weiyou/pages/detail/detail.js</small>
+                    </li>
+
+                    <li>
+                        <strong>86 score</strong>
+                        <small>example/weiyou/config.js</small>
+                    </li>
+
+                    <li>
+                        <strong>90 score</strong>
+                        <small>example/weiyou/pages/themes/themes.js</small>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="reportBlock locList">
+                <h2 class="reportTitle">最大文件</h2>
+                <ul class="list-unstyled">
+
+                    <li>
+                        <strong>201 lines</strong>
+                        <small>example/weiyou/pages/detail/detail.js</small>
+                    </li>
+
+                    <li>
+                        <strong>191 lines</strong>
+                        <small>example/weiyou/pages/index/index.js</small>
+                    </li>
+
+                    <li>
+                        <strong>91 lines</strong>
+                        <small>example/weiyou/utils/util.js</small>
+                    </li>
+
+                    <li>
+                        <strong>36 lines</strong>
+                        <small>example/weiyou/pages/themes/themes.js</small>
+                    </li>
+
+                    <li>
+                        <strong>12 lines</strong>
+                        <small>example/weiyou/app.js</small>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="reportBlock lintList">
+                <h2 class="reportTitle">不符合代码规范警告</h2>
+                <ul class="list-unstyled">
+
+                    <li>
+                        <strong>9lint 错误</strong>
+                        <small>example/weiyou/pages/detail/detail.js</small>
+                   </li>
+
+                    <li>
+                        <strong>7lint 错误</strong>
+                        <small>example/weiyou/pages/index/index.js</small>
+                   </li>
+
+                    <li>
+                        <strong>7lint 错误</strong>
+                        <small>example/weiyou/utils/util.js</small>
+                   </li>
+
+                    <li>
+                        <strong>3lint 错误</strong>
+                        <small>example/weiyou/pages/themes/themes.js</small>
+                   </li>
+
+                    <li>
+                        <strong>1lint 错误</strong>
+                        <small>example/weiyou/app.js</small>
+                   </li>
+
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<script type="text/javascript" src="assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="assets/scripts/plato-display.js"></script>
+
+</body>
+</html>

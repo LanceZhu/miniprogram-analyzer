@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - example/seed/utils/tunnelMatch.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">报告首页</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>example/seed/utils/tunnelMatch.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">代码可维护性 <a href="https://avandeursen.com/2014/08/29/think-twice-before-using-the-maintainability-index/"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="取值范围0-100；分值越高表示代码可维护性越强；0-10表示低可维护性，10-20表示中等可维护性，20-100表示高可维护性" data-original-title="代码可维护性，点击问号有详细说明"  data-container="body"></i></a></h2>
+      <p class="stat">66.95</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">代码行数 <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">105</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">难度  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="难度表示程序编写或阅读的难易程度，分值越高表示越难编写或阅读" data-original-title="难度" data-container="body"></i></a></h2>
+      <p class="stat">22.79</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">预估错误  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="根据Halstead模型得出的潜在bug数，点击问号有详细说明" data-original-title="预估bug数" data-container="body"></i></a></h2>
+      <p class="stat">0.91</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">函数权重</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">依据复杂度 <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="代码块中入口至出口间路径数，例：没有if语句，顺序执行，值为1；if语句一个条件，值为2。点击问号有详细说明" data-original-title="圈复杂度" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">依据逻辑代码行数  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">const util = require(&#039;./util&#039;)
+const Session = require(&#039;../vendor/wafer2-client-sdk/lib/session.js&#039;)
+/**
+ * 玩家匹配函数 用于fightingMatch
+ * @param page 当前页面
+ * @param app 小程序实例
+ * @param opt 当前页面相关数据
+ */
+function match(page, app, opt) {
+  const that = page
+  if (app.appData.tunnelStatus != &#039;close&#039;) {
+    app.tunnel.close()
+  }
+  app.tunnelCreate()//app统一创建信道，并监听相关变化
+  const tunnel = app.tunnel
+
+  //获取当前信道id
+  function getCurrentTunnelId() {
+    console.log(&#039;[getCurrentTunnelId]&#039;, app.tunnel.socketUrl.slice(app.tunnel.socketUrl.indexOf(&#039;tunnelId=&#039;) + 9, app.tunnel.socketUrl.indexOf(&#039;&amp;&#039;)))
+    return app.tunnel.socketUrl.slice(app.tunnel.socketUrl.indexOf(&#039;tunnelId=&#039;) + 9, app.tunnel.socketUrl.indexOf(&#039;&amp;&#039;))
+  }
+
+  //信道连接成功回调函数
+  app.tunnelConnectCallback = () =&gt; {
+    let userInfo = Session.get().userinfo
+    userInfo.tunnelId = getCurrentTunnelId()
+    that.setData({
+      status: &#039;已连接，对手匹配中...&#039;,
+      userInfo,//用户信息存储当前的信道Id
+    })
+    //发起匹配
+    console.log(&#039;信道连接成功,发起匹配[emit][updateMatchInfo]&#039;)
+    tunnel.emit(&#039;updateMatchInfo&#039;, {
+      openId: that.data.openId,
+      sortId: opt.sortId,
+      friendsFightingRoom: opt.friendsFightingRoom//匹配者含friendsFightingRoom则说明是好友之间的匹配
+    })
+  }
+
+  //信道连接关闭回调函数
+  app.tunnelCloseCallback = () =&gt; {
+    that.setData({ status: &#039;连接已关闭&#039; })
+    util.showSuccess(&#039;连接已断开&#039;)
+  }
+
+  //信道重连回调函数
+  app.tunnelReconnectCallback = () =&gt; {
+    util.showSuccess(&#039;已重新连接&#039;)
+    let userInfo = Session.get().userinfo
+    userInfo.tunnelId = getCurrentTunnelId()
+    that.setData({
+      status: &#039;网络已重连，匹配中...&#039;,
+      userInfo,
+    })
+    tunnel.emit(&#039;updateMatchInfo&#039;, {//发起匹配
+      openId: that.data.openId,
+      sortId: opt.sortId,
+      friendsFightingRoom: opt.friendsFightingRoom//匹配者含friendsFightingRoom则说明是好友之间的匹配
+    })
+  }
+
+  //信道重连成功回调函数
+  app.tunnelReconnectCallback = () =&gt; {
+    util.showSuccess(&#039;已重新连接&#039;)
+    let userInfo = Session.get().userinfo
+    userInfo.tunnelId = getCurrentTunnelId()
+    that.setData({
+      status: &#039;网络重连成功，对手匹配中...&#039;,
+      userInfo,
+    })
+  }
+
+  //信道连接错误回调函数
+  app.tunnelErrorCallback = (error) =&gt; {
+    that.setData({ status: &#039;信道发生错误：&#039; + error })
+    util.showSuccess(&#039;连接错误&#039;)
+  }
+
+  //监听匹配成功
+  tunnel.on(&#039;matchNotice&#039;, (res) =&gt; {//监听匹配成功
+    console.log(&#039;[matchNotice]&#039;, res)
+    let user_me, user_others
+    if (res.player1.openId === that.data.openId) {
+      user_me = res.player1
+      user_others = res.player2
+    } else {
+      user_me = res.player2
+      user_others = res.player1
+    }
+    wx.setStorageSync(&#039;user_me&#039;, user_me)
+    wx.setStorageSync(&#039;user_others&#039;, user_others)
+    that.setData({ status: user_me.nickName + &#039; VS &#039; + user_others.nickName })
+    setTimeout(goto_fighting_room, 2000)//延迟1s跳转到战队页面
+    let friends_match = opt.friends_match ? opt.friends_match : 0
+    function goto_fighting_room() {
+      wx.redirectTo({ //navigateTo不会会卸载该页面，只是将当前页面隐藏了,redirectTo会销毁当前页面
+        url: `../fighting_room/fighting_room?roomName=${res.player1.roomName}`+&#039;&amp;friends_match=&#039;+friends_match
+      })
+    }
+  })
+}
+
+module.exports = {
+  match
+}</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ cyclomatic }} <br>
+    Length : {{ halstead.length }} <br>
+    Difficulty : {{ halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>

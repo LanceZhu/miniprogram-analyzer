@@ -1,0 +1,6672 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+文档的内容......
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+文档的内容......
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+文档的内容......
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+<style>
+body {
+background:red;
+}
+</style>
+</head>
+
+<body>
+吴老师的文档
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+<style>
+body {
+background:red;
+
+</style>
+</head>
+
+<body>
+吴老师的文档
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+<style>
+body {
+background:red;
+
+</style>
+</head>
+
+<body>
+吴老师的文档
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+<style>
+body {
+background:red
+
+</style>
+</head>
+
+<body>
+吴老师的文档
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+<style>
+body {
+background:
+
+</style>
+</head>
+
+<body>
+吴老师的文档
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+<style>
+body 
+
+<
+</head>
+
+<body>
+吴老师的文档
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=\"utf-8\">
+<title>菜鸟教程(runoob.com)</title>
+function displayDate(){
+	document.getElementById(\"demo\").innerHTML=Date();
+}
+</script>
+</head>
+<body>
+
+<h1>我的第一个 JavaScript 程序</h1>
+<p id=\"demo\">这是一个段落</p>
+
+<button type=\"button\" onclick=\"displayDate()\">显示日期</button>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=\"utf-8\">
+<title>菜鸟教程(runoob.com)</title>
+<script>
+function displayDate(){
+	document.getElementById(\"demo\").innerHTML=Date();
+}
+</script>
+</head>
+<body>
+
+<h1>我的第一个 JavaScript 程序</h1>
+<p id=\"demo\">这是一个段落</p>
+
+<button type=\"button\" onclick=\"displayDate()\">显示日期</button>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+文档的内容......
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+文档的内容......
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function fn(a,b){
+	return a+b;
+}
+var res = fn(2,3)；
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function fn(a,b){
+	return a+b;
+};
+var res = fn(2,3)；
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c;
+};
+var res = plus(1,2,3)；
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c;
+};
+var res = plus(1,2,3)；
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c;
+};
+var res = plus(1,2,3)；
+document.write(plus(1,2,3));
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c;
+};
+var res = plus(1,2,3)；
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c;
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+文档的内容......
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+function plus(a,b,c){
+return a+b+c
+};
+var res=plus(1,2,3);
+document.write(res);
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+return a+b+c
+};
+var res=plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo“，”Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+        document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo“，”Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+        document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo“，”Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+        document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+        return a+b+c
+};
+var ves = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+        return a+b+c
+};
+var ves = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+        return a+b+c
+};
+var ves = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+        return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+文档的内容......
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset=\"utf-8\"> 
+<title></title> 
+<script>
+function welcome(){
+	alert(\"欢迎！\");
+}
+function changeText(){
+	var ele = document.getElementById(\'demo\');
+	ele.innerHTML=(ele.innerHTML == \"True\")? \"False\":\"True\";
+}
+function consoleTest(){
+	var ele = document.getElementById(\'demo\');
+	console.log(ele.innerHTML);
+}
+
+</script>
+</head>
+<body>
+
+
+<p id=\"demo\">True</p>
+<button onclick=\"welcome()\">按钮1</button>
+<button onclick=\"changeText()\">按钮2</button>
+<button onclick=\"consoleTest()\">按钮3</button>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset=\"utf-8\"> 
+<title></title> 
+	
+<style>
+	p{
+		color: red;
+		text-decoration: underline
+	}	
+</style>
+	
+<script>
+function check(){
+	var num = document.getElementById(\"num\").value;
+	var name = document.getElementById(\"name\").value;
+	
+	if(num.length != 5 || isNaN(num) || name.length == 0){
+		alert(\"输入错误\");
+		return false;
+	}
+	
+	return true;
+}
+
+</script>
+</head>
+<body>
+
+<form action=\"\" onsubmit=\"return check()\">
+<p>姓名：</p><input type=\"text\" id=\"name\"/>
+<p>学号：</p><input type=\"text\" id=\"num\"/>
+<br/>
+<p>年级：</p>
+<select>
+	<option value=\"大一\">大一</option>
+	<option value=\"大二\">大二</option>
+	<option value=\"大三\">大三</option>
+	<option value=\"大四\">大四</option>
+</select>
+<br/>
+<input type=\"submit\"/>
+</form>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset=\"utf-8\"> 
+<title></title> 
+	
+<style>
+	p{
+		color: red;
+		text-decoration: underline
+	}	
+</style>
+	
+<script>
+function check(){
+	var num = document.getElementById(\"num\").value;
+	var name = document.getElementById(\"name\").value;
+	
+	if(num.length != 5 || isNaN(num) || name.length == 0){
+		alert(\"输入错误\");
+		return false;
+	}
+	
+	return true;
+}
+
+</script>
+</head>
+<body>
+
+<form action=\"www.baidu.com\" onsubmit=\"return check()\">
+<p>姓名：</p><input type=\"text\" id=\"name\"/>
+<p>学号：</p><input type=\"text\" id=\"num\"/>
+<br/>
+<p>年级：</p>
+<select>
+	<option value=\"大一\">大一</option>
+	<option value=\"大二\">大二</option>
+	<option value=\"大三\">大三</option>
+	<option value=\"大四\">大四</option>
+</select>
+<br/>
+<input type=\"submit\"/>
+</form>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset=\"utf-8\"> 
+<title></title> 
+	
+<style>
+	p{
+		color: red;
+		text-decoration: underline
+	}	
+</style>
+	
+<script>
+function check(){
+	var num = document.getElementById(\"num\").value;
+	var name = document.getElementById(\"name\").value;
+	
+	if(num.length != 5 || isNaN(num) || name.length == 0){
+		alert(\"输入错误\");
+		return false;
+	}
+	
+	return true;
+}
+
+</script>
+</head>
+<body>
+
+<form action=\"http://www.baidu.com\" onsubmit=\"return check()\">
+<p>姓名：</p><input type=\"text\" id=\"name\"/>
+<p>学号：</p><input type=\"text\" id=\"num\"/>
+<br/>
+<p>年级：</p>
+<select>
+	<option value=\"大一\">大一</option>
+	<option value=\"大二\">大二</option>
+	<option value=\"大三\">大三</option>
+	<option value=\"大四\">大四</option>
+</select>
+<br/>
+<input type=\"submit\"/>
+</form>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset=\"utf-8\"> 
+<title></title> 
+	
+<style>
+	p{
+		color: red;
+		text-decoration: underline
+	}	
+</style>
+	
+<script>
+function check(){
+	var num = document.getElementById(\"num\").value;
+	var name = document.getElementById(\"name\").value;
+	
+	if(num.length != 5 || isNaN(num) || name.length == 0){
+		alert(\"输入错误\");
+		return false;
+	}
+	
+	return true;
+}
+
+</script>
+</head>
+<body>
+
+<form action=\"http://www.baidu.com\" onsubmit=\"return check()\">
+<p>姓名：</p><input type=\"text\" id=\"name\"/>
+<p>学号：</p><input type=\"text\" id=\"num\"/>
+<br/>
+<p>年级：</p>
+<select>
+	<option value=\"大一\">大一</option>
+	<option value=\"大二\">大二</option>
+	<option value=\"大三\">大三</option>
+	<option value=\"大四\">大四</option>
+</select>
+<br/>
+<input type=\"submit\"/>
+</form>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset=\"utf-8\"> 
+<title></title> 
+	
+<style>
+	p{
+		color: red;
+		text-decoration: underline
+	}	
+</style>
+	
+<script>
+function check(){
+	var num = document.getElementById(\"num\").value;
+	var name = document.getElementById(\"name\").value;
+	
+	if(num.length != 5 || isNaN(num) || name.length == 0){
+		alert(\"输入错误\");
+		return false;
+	}
+	
+	return true;
+}
+
+</script>
+</head>
+<body>
+
+<form action=\"https://www.baidu.com\" onsubmit=\"return check()\">
+<p>姓名：</p><input type=\"text\" id=\"name\"/>
+<p>学号：</p><input type=\"text\" id=\"num\"/>
+<br/>
+<p>年级：</p>
+<select>
+	<option value=\"大一\">大一</option>
+	<option value=\"大二\">大二</option>
+	<option value=\"大三\">大三</option>
+	<option value=\"大四\">大四</option>
+</select>
+<br/>
+<input type=\"submit\"/>
+</form>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset=\"utf-8\"> 
+<title></title> 
+	
+<style>
+	p{
+		color: red;
+		text-decoration: underline
+	}	
+</style>
+	
+<script>
+function check(){
+	var num = document.getElementById(\"num\").value;
+	var name = document.getElementById(\"name\").value;
+	
+	if(num.length != 5 || isNaN(num) || name.length == 0){
+		alert(\"输入错误\");
+		return false;
+	}
+	
+	return true;
+}
+
+</script>
+</head>
+<body>
+
+<form action=\"https://www.baidu.com\" onsubmit=\"return check()\">
+<p>姓名：</p><input type=\"text\" id=\"name\"/>
+<p>学号：</p><input type=\"text\" id=\"num\"/>
+<br/>
+<p>年级：</p>
+<select>
+	<option value=\"大一\">大一</option>
+	<option value=\"大二\">大二</option>
+	<option value=\"大三\">大三</option>
+	<option value=\"大四\">大四</option>
+</select>
+<br/>
+<input type=\"submit\"/>
+</form>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset=\"utf-8\"> 
+<title></title> 
+	
+<style>
+	p{
+		color: red;
+		text-decoration: underline
+	}	
+</style>
+	
+<script>
+function check(){
+	var num = document.getElementById(\"num\").value;
+	var name = document.getElementById(\"name\").value;
+	
+	if(num.length != 5 || isNaN(num) || name.length == 0){
+		alert(\"输入错误\");
+		return false;
+	}
+	
+	return true;
+}
+
+</script>
+</head>
+<body>
+
+<form action=\"https://www.baidu.com\" onsubmit=\"return check()\">
+<p>姓名：</p><input type=\"text\" id=\"name\"/>
+<p>学号：</p><input type=\"text\" id=\"num\"/>
+<br/>
+<p>年级：</p>
+<select>
+	<option value=\"大一\">大一</option>
+	<option value=\"大二\">大二</option>
+	<option value=\"大三\">大三</option>
+	<option value=\"大四\">大四</option>
+</select>
+<br/>
+<input type=\"submit\"/>
+</form>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset=\"utf-8\"> 
+<title></title> 
+	
+<style>
+	p{
+		color: red;
+		text-decoration: underline
+	}	
+</style>
+	
+<script>
+function check(){
+	var num = document.getElementById(\"num\").value;
+	var name = document.getElementById(\"name\").value;
+	
+	if(num.length != 5 || isNaN(num) || name.length == 0){
+		alert(\"输入错误\");
+		return false;
+	}
+	
+	return true;
+}
+
+</script>
+</head>
+<body>
+
+<form action=\"https://www.baidu.com\" onsubmit=\"return check()\">
+<p>姓名：</p><input type=\"text\" id=\"name\"/>
+<p>学号：</p><input type=\"text\" id=\"num\"/>
+<br/>
+<p>年级：</p>
+<select>
+	<option value=\"大一\">大一</option>
+	<option value=\"大二\">大二</option>
+	<option value=\"大三\">大三</option>
+	<option value=\"大四\">大四</option>
+</select>
+<br/>
+<input type=\"submit\"/>
+</form>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset=\"utf-8\"> 
+<title></title> 
+	
+<style>
+	p{
+		color: red;
+		text-decoration: underline
+	}	
+</style>
+	
+<script>
+function check(){
+	var num = document.getElementById(\"num\").value;
+	var name = document.getElementById(\"name\").value;
+	
+	if(num.length != 5 || isNaN(num) || name.length == 0){
+		alert(\"输入错误\");
+		return false;
+	}
+	
+	return true;
+}
+
+</script>
+</head>
+<body>
+
+<form action=\"\" onsubmit=\"return check()\">
+<p>姓名：</p><input type=\"text\" id=\"name\"/>
+<p>学号：</p><input type=\"text\" id=\"num\"/>
+<br/>
+<p>年级：</p>
+<select>
+	<option value=\"大一\">大一</option>
+	<option value=\"大二\">大二</option>
+	<option value=\"大三\">大三</option>
+	<option value=\"大四\">大四</option>
+</select>
+<br/>
+<input type=\"submit\"/>
+</form>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+document.write(cars[i]+\"<br>\");
+}
+<script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+document.write(cars[i]+\"<br>\");
+}
+<script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+document.write(cars[i]+\"<br>\");
+}
+<script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+document.write(cars[i]+\"<br>\");
+}
+<script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+文档的内容......
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title><!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+</head>
+
+<body>
+文档的内容......
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title><!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title><!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+文档的内容......
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+laalal
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>大帅比苏峥祎</title>
+</head>
+
+<body>
+laalal
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>大帅比苏峥祎</title>
+</head>
+
+<body>
+大帅比苏峥祎
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>大帅比苏峥祎</title>
+</head>
+
+<body>
+cars=[“BMW”,”Volvo”,”Saab”,”Ford”]
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>大帅比苏峥祎</title>
+</head>
+
+<body>
+cars=[“BMW”,”Volvo”,”Saab”,”Ford”]
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>大帅比苏峥祎</title>
+</head>
+
+<body>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+return a+b+c
+};
+var res=plus(1,2,3);
+ducoment.write(plus)
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+return a+b+c
+};
+var res=plus(1,2,3);
+ducoment.write(res)
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+return a+b+c
+};
+var res=plus(1,2,3);
+ducoment.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+        return a+b+c
+};
+var res=plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset=\"utf-8\"> 
+<title></title> 
+	
+<style>
+	p{
+		color: red;
+		text-decoration: underline
+	}	
+</style>
+	
+<script>
+function check(){
+	var num = document.getElementById(\"num\").value;
+	var name = document.getElementById(\"name\").value;
+	
+	if(num.length != 5 || isNaN(num) || name.length == 0){
+		alert(\"输入错误\");
+		return false;
+	}
+	
+	return true;
+}
+
+</script>
+</head>
+<body>
+
+<form action=\"\" onsubmit=\"return check()\">
+<p>姓名：</p><input type=\"text\" id=\"name\"/>
+<p>学号：</p><input type=\"text\" id=\"num\"/>
+<br/>
+<p>年级：</p>
+<select>
+	<option value=\"大一\">大一</option>
+	<option value=\"大二\">大二</option>
+	<option value=\"大三\">大三</option>
+	<option value=\"大四\">大四</option>
+</select>
+<br/>
+<input type=\"submit\"/>
+</form>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+文档的内容......
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+文档的内容......
+<script>
+cars=[\"1\",\"2\",\"3\",\"4\"];
+for(var i=0;i<cars.length;i++){
+ document.write(cars[i]+\"<br>\")
+}       
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+文档的内容......
+<script>
+cars=[\"1\",\"2\",\"3\",\"4\"];
+for(var i=0;i<cars.length;i++){
+ document.write(cars[i]+\"<br>\")
+}       
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+  fuction displayDate(){
+     document.getElementById(\"demo\").innerHTML=Date();}
+</script>
+
+</head>
+ 
+ 
+<body>
+<h1>我的第一个 JavaScript 程序</h1>
+<p id=\"demo\">这是一个段落</p>
+​
+<button type=\"button\" onclick=\"displayDate()\">显示日期</button>
+​
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+  fuction displayDate(){
+     document.getElementById(\"demo\").innerHTML=Date();}
+</script>
+
+</head>
+ 
+ 
+<body>
+<h1>我的第一个 JavaScript 程序</h1>
+<p id=\"demo\">这是一个段落</p>
+​
+<button type=\"button\" onclick=\"displayDate()\">显示日期</button>
+​
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(3,4,5);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(3,4,5);
+document.write(res,\"<br>\");
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(3,4,5);
+document.write(res,\"<br>\");
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(3,4,5);
+document.write(res,\"<br>\");
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+cars=[“BMW”,”Volvo”,”Saab”,”Ford”];
+for(var i=0;i<cars.length;i++){
+document.write=\"cars[i] \";
+}
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+cars=[“BMW”,”Volvo”,”Saab”,”Ford”];
+for(var i=0;i<cars.length;i++){
+document.write=\"cars[i] \";
+}
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[“BMW”,”Volvo”,”Saab”,”Ford”];
+for(var i=0;i<cars.length;i++){
+document.write(cars[1]+\"bar\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[“BMW”,”Volvo”,”Saab”,”Ford”];
+for(var i=0;i<cars.length;i++){
+document.write(cars[1]+\"bar\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[“BMW”,”Volvo”,”Saab”,”Ford”];
+for(var i=0;i<cars.length;i++){
+document.write(cars[1]+\"bar\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+document.write(cars[i]+\"br\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+document.write(cars[i]+<br>);
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+document.write(cars[i]+<br>);
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+document.write(cars[i] +\"br\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+document.write(cars[i] + \"br\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[“BMW”,”Volvo”,”Saab”,”Ford”];
+for(var i=0;i<cars.length;i++){
+document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function fn(a,b,c){
+ return a+b+c;
+}
+var sum=fn(1,2,3);
+document.write(sum);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+文档的内容......
+<script>
+function plus(a,b,c){
+return d=a+b+c;
+}
+var res=plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+document.write(cars[i] + \"<br>\" );
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+document.write(cars[i] + \"<br>\" );
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+document.write(cars[i] + \"<br>\" );
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+return a+b+c
+};
+var res=plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+return a+b+c
+};
+var res=plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+return a+b+c
+};
+var res=plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){document.write(cars[I]+\"<br>\");}
+</script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){document.write(cars[I]+\"<br>\");}
+</script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){document.write(cars[I]+\"<br>\");}
+</script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){document.write(cars[I]+\"<br>\");}
+</script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){document.write(cars[I]+\"<br>\");}
+</script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){document.write(cars[I]+\"<br>\");}
+</script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+animals=[\"dog\",\"cat\",\"monkey\",\"tiger\",\"fish\"];
+for(var i=0;i<animals.length;i++){
+         document.write(animals[i]+\"<br>\");}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+animals=[\"dog\",\"cat\",\"monkey\",\"tiger\",\"fish\"];
+for(var i=0;i<animals.length;i++){
+         document.write(animals[i]+\"<br>\");}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+function plus(a,b,c){return a+b+c};
+var res = plus(1,2,3);
+document.write(res);
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){return a+b+c};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function multiply(a,b,c){return a+b+c};
+var res = multiply(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function multiply(a,b,c){return a+b+c};
+var res = multiply(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function multiply(a,b,c){return a+b+c};
+var res = multiply(1,5,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function multiply(a,b,c){return a+b+c};
+var res = multiply(1,5,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function multiply(a,b,c){return a+b+c};
+var res = multiply(2,5,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function multiply(a,b,c){return a+b+c};
+var res = multiply(2,5,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function multiply(a,b,c){return a*b*c};
+var res = multiply(2,5,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){return a*b*c};
+var res = multiply(2,5,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){return a*b*c};
+var res = multiply(2,5,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){return a*b*c};
+var res = multiply(2,6,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){return a*b*c};
+var res = multiply(2,6,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"\"aaa\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"\"aaa\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BWM\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+        document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BWM\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+        document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function pius(a,b,c){
+         return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+         return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+         return a+b+c
+};
+var res = plus(2,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+
+<script>
+people=[\"赵云\",\"张飞\"，\"关羽\"，\"曹操\"，\"孙策\"];
+for(var i=0,i<people.length;i++;){
+           document.write(people[i]+\"<br>\")
+}
+</script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+
+<script>
+people=[\"赵云\",\"张飞\"，\"关羽\"，\"曹操\"，\"孙策\"];
+for(var i=0,i<people.length;i++;){
+           document.write(people[i]+\"<br>\")
+}
+</script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+
+<script>
+people=[\"赵云\",\"张飞\"，\"关羽\"，\"曹操\"，\"孙策\"];
+for(var i=0,i<people.length;i++;){
+           document.write(people[i]+\"<br>\")
+}
+</script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+
+<script>
+people=[\"赵云\",\"张飞\"，\"关羽\"，\"曹操\"，\"孙策\"];
+for(var i=0,i<people.length;i++;){
+           document.write(people[i]+\"<br>\")
+}
+</script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+people=[\"赵云\",\"张飞\"，\"关羽\"，\"曹操\"，\"孙策\"];
+for(var i=0,i<people.length;i++;){
+           document.write(people[i]+\"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+people=[\"赵云\",\"张飞\"，\"关羽\"，\"曹操\"，\"孙策\"];
+for(var i=0,i<people.length;i++;){
+           document.write(people[i]+\"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"曹操\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"曹操\",\"关羽\",\"刘备\",\"赵云\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+people=[\"曹操\",\"关羽\",\"刘备\",\"赵云\"];
+for (var i=0;i<cars.length;i++){
+	document.write(people[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+people=[\"曹操\",\"关羽\",\"刘备\",\"赵云\"];
+for (var i=0;i<people.length;i++){
+	document.write(people[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+
+</body><script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"bmw\",\"volvo\",\"saab\",\"ford\"];
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"bmw\",\"volvo\",\"saab\",\"ford\"];
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"bmw\",\"volvo\",\"saab\",\"ford\"];
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"bmw\",\"volvo\",\"saab\",\"ford\"];
+为（VAR我=0；我<汽车。长度；我 ++）
+{文档。写（cars[i]+\"<br>\"）;
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"bmw\",\"volvo\",\"saab\",\"ford\"];
+为（VAR我=0；我<汽车。长度；我 ++）
+{文档。写（cars[i]+\"<br>\"）;
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"bmw\",\"volvo\",\"saab\",\"ford\"];
+为（VAR我=0；我<汽车。长度；我 ++）
+{文档。写（cars[i]+\"<br>\"）;
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"bmw\",\"volvo\",\"saab\",\"ford\"];
+为（VAR我=0；我<汽车。长度；我 ++）
+{文档。写（cars[i]+\"<br>\"）;
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+ function  plus （ a， b， c）{ 
+	return a + b + c
+ } ; 
+VAR RES =  加（1 ，2 ，3 ）; 
+文件。写（ res）; 
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+< script >
+ function  plus （ a， b， c）{ 
+	return a + b + c
+ } ; 
+VAR RES =  加（1 ，2 ，3 ）; 
+文件。写（ res）; 
+</ script >  
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+< script >
+ function  plus （ a， b， c）{ 
+	return a + b + c
+ } ; 
+//VAR RES =  加（1 ，2 ，3 ）; 
+//文件。写（ res）; 
+</ script >  
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"bmw\",\"volvo\",\"saab\",\"ford\"];
+为（VAR我=0；我<汽车。长度；我 ++）
+{文档。写（cars[i]+\"<br>\"）;
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+< script > 
+cars = [ “BMW” ，“Volvo” ，“Saab” ，“Ford” ] ; 
+为 （VAR我 = 0 ;我 <汽车。长度 ;我 ++ ）{ 
+	文档。写（ cars [ i ]  +  “<br>” ）; 
+} 
+</ script >
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+文档的内容......
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+var cars=[“BMW”,”Volvo”,”Saab”,”Ford”];
+for (var x of cars)
+{
+    consore.log(x);
+}
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+var cars=[“BMW”,”Volvo”,”Saab”,”Ford”];
+for (var x of cars)
+{
+    consore.log(x);
+}
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<scrict>
+var cars=[“BMW”,”Volvo”,”Saab”,”Ford”];
+for (var x of cars)
+{
+    consore.log(x);
+}
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<scrict>
+var cars=[“BMW”,”Volvo”,”Saab”,”Ford”];
+for (var x of cars)
+{
+    consore.log(x);
+}
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+文档的内容......
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+cars=[“BMW”,”Volvo”,”Saab”,”Ford”];
+for (var x of cars)
+{
+    consore.log(x);
+}
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+var cars=[“BMW”,”Volvo”,”Saab”,”Ford”];
+for(var x of cars){
+  console.log(x);
+
+}
+
+
+
+
+var cars=[“BMW”,”Volvo”,”Saab”,”Ford”];
+for(var x of cars){
+  console.log(x);
+}
+
+
+
+
+var cars=[\"BMW\",\"volvo\",\"saab\",\"ford\"];
+for(var x of cars){
+  console.log(x);
+}
+
+
+
+
+var cars=[\"BMW\",\"volvo\",\"saab\",\"ford\"];
+for(var x of cars){
+  console.log(x);
+}
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+        document.write(cars[i]+\"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+        document.write(cars[i]+\"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+        document.write(cars[i]+\"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+       document.write(cars[i]+\"<br>\");
+}
+<script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+       document.write(cars[i]+\"<br>\");
+}
+<script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+       document.write(cars[i]+\"<br>\");
+}
+<script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+       document.write(cars[i]+\"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+        return a+b+c
+};
+var res=plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+        return a*b*c
+};
+var res=plus(2,2,3);
+document.write(res);
+</script>
+</body>
+
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function fn(a,b,c){
+ return a+b+c
+}
+var res=fn(1,2,3)
+document.write(res)
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function fn(a,b,c){
+ return a+b+c
+}
+var res=fn(1,2,3)
+document.write(res)
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>测试for循环</title>
+</head>
+
+<body>
+<script>
+cars=[\"abc\",\"def\",\"sdc\"];
+for(var i=0;i<=cars.length;i++)
+{document.write(cars[i]+\"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>测试for循环</title>
+</head>
+
+<body>
+<script>
+cars=[\"abc\",\"def\",\"sdc\"];
+for(var i=0;i<cars.length;i++)
+{document.write(cars[i]+\"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>函数练习</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c)
+{return a+b+c};
+var res=plus(1,2.3)
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>函数练习</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c)
+{return a+b+c};
+var res=plus(1,2.3);
+document.write(res);
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>函数练习</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c)
+{return a+b+c};
+var res=plus(1,2.3);
+document.write(res);
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>函数练习</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c)
+{return a+b+c};
+var res=plus(1,2.3);
+document.write(res);
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>函数练习</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c)
+{return a+b+c};
+var res=plus(1,2.3);
+document.write(res);
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>函数练习</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c)
+{return a+b+c};
+var res=plus(1,2.3);
+document.write(res);
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>函数练习</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c)
+{return a+b+c};
+var res=plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>函数练习</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c)
+{return a+b+c};
+var res=plus(5,4,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+function plus(a,b,c)
+{renturn a+b+c};
+sum=plus(a,b,c);
+document.write(sum);
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c)
+{renturn a+b+c};
+sum=plus(a,b,c);
+document.write(sum);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c)
+{renturn a+b+c};
+sum=plus(a,b,c);
+document.write(sum);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c)
+{renturn a+b+c};}
+sum=plus(a,b,c);
+document.write(sum);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c)
+{renturn a+b+c}};
+var sum=plus(a,b,c);
+document.write(sum);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c)
+{renturn a+b+c}};
+var sum=plus(1,2,3);
+document.write(sum);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c)
+{renturn a+b+c}};
+var sum=plus(1,2,3);
+document.write(sum);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c)
+{
+renturn a+b+c}
+};
+var sum=plus(1,2,3);
+document.write(sum);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c)
+{
+renturn a+b+c
+};
+var sum=plus(1,2,3);
+document.write(sum);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var sum = plus(1,2,3);
+document.write(sum);
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+<script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<script>
+cars=[\"BMW\",\"benz\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function multiply(a,b,c){return a*b*c};
+d=function(3,4,5);
+document.write(d);
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function multiply(a,b,c){return a*b*c};
+var d=function(3,4,5);
+document.write(d);
+</script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function multiply(a,b,c){return a*b*c};
+var d=multiply(3,4,5);
+document.write(d);
+</script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function multiply(a,b,c){return a*b*c};
+var d=multiply(3,4,5);
+document.write(d);
+</script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+    document.write(cars[i]+\"<br>\");}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){
+    document.write(cars[i]+\"<br>\");}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function pius(a,b,c){
+     return a+b+c};
+var res = pius(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function pius(a,b,c){
+     return a+b+c};
+var res = pius(2,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function pius(a,b,c){
+     return pius=a+b+c};
+var res = pius(2,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function pius(a,b,c){
+     return pius=a+b+c};
+var res = pius(4,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+文档的内容......
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+
+1
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+文档的内容......
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cities=[\"NewYork\",\"Paris\",\"London\",\"Beijing\"];
+for (var i=0;i<cities.length;i++){
+	document.write(cities[i] + \"<br>\");
+}
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cities=[\"NewYork\",\"Paris\",\"London\",\"Beijing\"];
+for (var i=0;i<cities.length;i++){
+	document.write(cities[i] + \"<br>\");
+}
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cities=[\"NewYork\",\"Paris\",\"London\",\"Beijing\"];
+for (var i=0;i<cities.length;i++){
+	document.write(cities[i] + \"<br>\");
+}
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cities=[\"NewYork\",\"Paris\",\"London\",\"Beijing\"];
+for (var i=0;i<cities.length;i++){
+	document.write(cities[i] + \"<br>\");
+}
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cities=[\"NewYork\",\"Paris\",\"London\",\"Beijing\"];
+for (var i=0;i<cities.length;i++){
+	document.write(cities[i] + \"<br>\");
+}
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cities=[\"NewYork\",\"Paris\",\"London\",\"Beijing\"];
+for (var i=0;i<cities.length;i++){
+	document.write(cities[i] + \"<br>\");
+}
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cities=[\"NewYork\",\"Paris\",\"London\",\"Beijing\"];
+for (var i=0;i<cities.length;i++){
+	document.write(cities[i] + \"<br>\");
+}
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW1\",\"Volvo2\",\"Saab3\",\"Ford4\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars = [\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i = 0; i < cars.length; i++){
+         document.write(cars[i]+\"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+文档的内容......
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i]);
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<\\n>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<  >\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<    >\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"\\n\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"    \");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \" a\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \\n);
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>a</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \" a\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+cars=[\"as\",\"ds\",\"as\",\"ws\"];
+for(var i=1;i<cars.length;i++){
+document.write(cars[i] + \"<br>\"}
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+cars=[\"as\",\"ds\",\"as\",\"ws\"];
+<script>
+for(var i=1;i<cars.length;i++){
+document.write(cars[i] + \"<br>\"}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+cars=[\"as\",\"ds\",\"as\",\"ws\"];
+<script>
+for(var i=1;i<cars.length;i++){
+document.write(cars[i] + \"<br>\"}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"as\",\"ds\",\"as\",\"ws\"];
+for(var i=1;i<cars.length;i++){
+document.write(cars[i] + \"<br>\"}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"as\",\"ds\",\"as\",\"ws\"];
+for(var i=0;i<cars.length;i++){
+document.write(cars[i] + \"<br>\"}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"as\",\"ds\",\"as\",\"ws\"];
+for(var i=0;i<cars.length;i++){
+document.write(cars[i] + \"<br>\"};
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"as\",\"ds\",\"as\",\"ws\"];
+for(var i=0;i<cars.length;i++){
+document.write(cars[i] + \"<br>\")};
+
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"as\",\"ds\",\"as\",\"ws\"];
+for(var i=0;i<cars.length;i++){
+document.write(cars[i] + \"\")};
+
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"as\",\"ds\",\"as\",\"ws\"];
+for(var i=0;i<cars.length;i++){
+document.write(cars[i] + \"<br>\")};
+
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"as\",\"ds\",\"as\",\"ws\"];
+document.write(cars[1] + \"<br>\");
+
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"as\",\"ds\",\"as\",\"ws\"];
+document.write(cars[0] + \"<br>\");
+
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+plus:function(a,b,c)
+{return a+b+c;}
+var sec=plus(1,2,3);
+document.write(sec);
+
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+plus:function(a,b,c){
+return a+b+c};
+var sec=plus(1,2,3);
+document.write(sec);
+
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){document.write(cars[i]+\"<br>\");}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++){document.write(cars[i]+\"<br>\");}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+return a+b+c};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+return a+b+c};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+return a+b+c};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+文档的内容......
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"刘炫男\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+Hello=[\"刘炫男\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<hello.length;i++){
+	document.write(hello[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+Hello=[\"刘炫男\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<hello.length;i++){
+	document.write(hello[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+hello=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<hello.length;i++){
+	document.write(hello[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+hello=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<hello.length;i++){
+	document.write(hello[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+hello=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<hello.length;i++){
+	document.write(hello[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+hello=[\"李旭\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<hello.length;i++){
+	document.write(hello[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+hello=[\"李旭\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<hello.length;i++){
+	document.write(hello[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function pluc(a,b,c)
+{ return a+b+c}
+var s=plus(1,2,3)
+document.print(S)
+<script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function pluc(a,b,c)
+{ return a+b+c}
+var s=plus(1,2,3)
+document.print(S)
+<script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+     document.write(cars[i] + \"<br>\")
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+     document.write(cars[i] + \"<br>\")
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+文档的内容......
+</body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>你好</title>
+</head>
+
+<body>
+文档的内容......
+</body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>你好</title>
+</head>
+
+<body>
+文档的内容......
+</body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>你好</title>
+</head>
+
+<body>
+文档的内容......
+</body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>你好</title>
+</head>
+
+<body>
+文档的内容......
+</body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+世界
+</body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+世界
+</body>
+<script>
+cars=[\"真好\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars;length;i++)
+{
+document.write(cars[i]+\"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars;length;i++)
+{
+document.write(cars[i]+\"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++)
+{
+document.write(cars[i]+\"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++)
+{
+document.write(cars[i]+\"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for(var i=0;i<cars.length;i++)
+{
+document.write(cars[i]+\"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c)
+{
+return a+b+c
+};
+var res=plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMw\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+        document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMw\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+        document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<=cars.length;i++){
+      document.write(cars[i}+\"<br>\"};
+</script>
+文档的内容......
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<=cars.length;i++){
+      document.write(cars[i}+\"<br>\"};
+</script>
+文档的内容......
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<=cars.length;i++){
+      document.write(cars[i}+\"<br>\"};
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<=cars.length;i++){
+      document.write(cars[i}+\"<br>\"};
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<=cars.length;i++){
+      document.write(cars[i}+\"<br>\"};
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<=cars.length;i++){
+      document.write(cars[i}+\"<br>\"};
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<=cars.length;i++){
+      document.write(cars[i}+\"<br>\"};}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<=cars.length;i++){
+      document.write(cars[i}+\"<br>\"};}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+文档的内容......
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",Ford\"];
+for{var i=0;i<cars.length;i++{
+document.write(cars[i]+\"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",Ford\"];
+for{var i=0;i<cars.length;i++{
+document.write(cars[i]+\"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",Ford\"];
+for{var i=0;i<cars.length;i++{
+document.write(cars[i]+\"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",Ford\"];
+for{var i=0;i<cars.length;i++{
+document.write(cars[i]+\"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",Ford\"];
+for{var i=0;i<cars.length;i++{
+document.write(cars[i]+\"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",Ford\"];
+for{var i=0;i<cars.length;i++{
+document.write(cars[i]+\"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",Ford\"];
+for{var i=0;i<cars.length;i++{
+document.write(cars[i]+\"<br>\");
+}
+</script>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+cars=[\"BMW\",\"Volvo\",\"Saab\",\"Ford\"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + \"<br>\");
+}
+</script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+<script>
+function plus(a,b,c){
+	return a+b+c
+};
+var res = plus(1,2,3);
+document.write(res);
+</script>
+</body>
+
+</html>

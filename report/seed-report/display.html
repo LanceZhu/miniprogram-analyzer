@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - JavaScript Introspection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <script>
+    var __options = {"title":"plato mini program","flags":{"complexity":{"commonjs":true,"logicalor":true,"switchcase":true,"forin":false,"trycatch":false,"newmi":true},"jshint":{}}}
+  </script>
+
+  <link href="assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="assets/css/plato.css" rel="stylesheet">
+  <link href="assets/css/plato-display.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>plato mini program</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="reportBlock lineCount">
+                <div class="reportContent">
+                    <small class="chart-label">总/平均代码行数</small>
+                    <h1>6800 / 136</h1>
+                </div>
+                <div id="chart_historical_sloc" class="chart js-chart"></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="reportBlock maintainability">
+                <div class="reportContent">
+                    <small class="chart-label">平均代码可维护性</small>
+                    <h1>75.42</h1>
+                </div>
+                <div id="chart_historical_maint" class="chart js-chart"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="reportBlock maintainabilityList">
+                <h2 class="reportTitle">最差代码可维护性得分</h2>
+                <ul class="list-unstyled">
+
+                    <li>
+                        <strong>52 score</strong>
+                        <small>example/seed/pages/mine/schedule/options.js</small>
+                    </li>
+
+                    <li>
+                        <strong>55 score</strong>
+                        <small>example/seed/pages/double/fighting_sort/fighting_sort.js</small>
+                    </li>
+
+                    <li>
+                        <strong>62 score</strong>
+                        <small>example/seed/vendor/wafer2-client-sdk/lib/constants.js</small>
+                    </li>
+
+                    <li>
+                        <strong>62 score</strong>
+                        <small>example/seed/config.js</small>
+                    </li>
+
+                    <li>
+                        <strong>63 score</strong>
+                        <small>example/seed/vendor/wafer2-client-sdk/lib/login.js</small>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="reportBlock locList">
+                <h2 class="reportTitle">最大文件</h2>
+                <ul class="list-unstyled">
+
+                    <li>
+                        <strong>957 lines</strong>
+                        <small>example/seed/template/calendar/index.js</small>
+                    </li>
+
+                    <li>
+                        <strong>565 lines</strong>
+                        <small>example/seed/utils/lodash.foreach/index.js</small>
+                    </li>
+
+                    <li>
+                        <strong>532 lines</strong>
+                        <small>example/seed/vendor/wafer2-client-sdk/lib/tunnel.js</small>
+                    </li>
+
+                    <li>
+                        <strong>453 lines</strong>
+                        <small>example/seed/pages/mine/schedule/schedule.js</small>
+                    </li>
+
+                    <li>
+                        <strong>431 lines</strong>
+                        <small>example/seed/template/datepicker/index.js</small>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="reportBlock lintList">
+                <h2 class="reportTitle">不符合代码规范警告</h2>
+                <ul class="list-unstyled">
+
+                    <li>
+                        <strong>51lint 错误</strong>
+                        <small>example/seed/app.js</small>
+                   </li>
+
+                    <li>
+                        <strong>51lint 错误</strong>
+                        <small>example/seed/pages/double/fighting_room/fighting_room.js</small>
+                   </li>
+
+                    <li>
+                        <strong>51lint 错误</strong>
+                        <small>example/seed/pages/index/index.js</small>
+                   </li>
+
+                    <li>
+                        <strong>51lint 错误</strong>
+                        <small>example/seed/pages/mine/ec-canvas/echarts.js</small>
+                   </li>
+
+                    <li>
+                        <strong>51lint 错误</strong>
+                        <small>example/seed/pages/mine/schedule/schedule.js</small>
+                   </li>
+
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<script type="text/javascript" src="assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="assets/scripts/plato-display.js"></script>
+
+</body>
+</html>

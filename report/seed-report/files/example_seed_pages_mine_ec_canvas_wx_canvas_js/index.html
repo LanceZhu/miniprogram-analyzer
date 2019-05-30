@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - example/seed/pages/mine/ec-canvas/wx-canvas.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">报告首页</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>example/seed/pages/mine/ec-canvas/wx-canvas.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">代码可维护性 <a href="https://avandeursen.com/2014/08/29/think-twice-before-using-the-maintainability-index/"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="取值范围0-100；分值越高表示代码可维护性越强；0-10表示低可维护性，10-20表示中等可维护性，20-100表示高可维护性" data-original-title="代码可维护性，点击问号有详细说明"  data-container="body"></i></a></h2>
+      <p class="stat">79.83</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">代码行数 <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">97</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">难度  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="难度表示程序编写或阅读的难易程度，分值越高表示越难编写或阅读" data-original-title="难度" data-container="body"></i></a></h2>
+      <p class="stat">20.60</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">预估错误  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="根据Halstead模型得出的潜在bug数，点击问号有详细说明" data-original-title="预估bug数" data-container="body"></i></a></h2>
+      <p class="stat">0.62</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">函数权重</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">依据复杂度 <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="代码块中入口至出口间路径数，例：没有if语句，顺序执行，值为1；if语句一个条件，值为2。点击问号有详细说明" data-original-title="圈复杂度" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">依据逻辑代码行数  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">export default class WxCanvas {
+  constructor(ctx, canvasId) {
+    this.ctx = ctx;
+    this.canvasId = canvasId;
+    this.chart = null;
+
+    // this._initCanvas(zrender, ctx);
+    this._initStyle(ctx);
+    this._initEvent();
+  }
+
+  getContext(contextType) {
+    if (contextType === &#039;2d&#039;) {
+      return this.ctx;
+    }
+  }
+
+  // canvasToTempFilePath(opt) {
+  //   if (!opt.canvasId) {
+  //     opt.canvasId = this.canvasId;
+  //   }
+
+  //   return wx.canvasToTempFilePath(opt, this);
+  // }
+
+  setChart(chart) {
+    this.chart = chart;
+  }
+
+  attachEvent () {
+    // noop
+  }
+
+  detachEvent() {
+    // noop
+  }
+
+  _initCanvas(zrender, ctx) {
+    zrender.util.getContext = function () {
+      return ctx;
+    };
+
+    zrender.util.$override(&#039;measureText&#039;, function (text, font) {
+      ctx.font = font || &#039;12px sans-serif&#039;;
+      return ctx.measureText(text);
+    });
+  }
+
+  _initStyle(ctx) {
+    var styles = [&#039;fillStyle&#039;, &#039;strokeStyle&#039;, &#039;globalAlpha&#039;, 
+      &#039;textAlign&#039;, &#039;textBaseAlign&#039;, &#039;shadow&#039;, &#039;lineWidth&#039;,
+      &#039;lineCap&#039;, &#039;lineJoin&#039;, &#039;lineDash&#039;, &#039;miterLimit&#039;, &#039;fontSize&#039;];
+
+    styles.forEach(style =&gt; {
+      Object.defineProperty(ctx, style, {
+        set: value =&gt; {
+          if (style !== &#039;fillStyle&#039; &amp;&amp; style !== &#039;strokeStyle&#039; 
+            || value !== &#039;none&#039; &amp;&amp; value !== null
+          ) {
+            ctx[&#039;set&#039; + style.charAt(0).toUpperCase() + style.slice(1)](value);
+          }
+        }
+      });
+    });
+
+    ctx.createRadialGradient = () =&gt; {
+      return ctx.createCircularGradient(arguments);
+    };
+  }
+
+  _initEvent() {
+    this.event = {};
+    const eventNames = [{
+      wxName: &#039;touchStart&#039;,
+      ecName: &#039;mousedown&#039;
+    }, {
+      wxName: &#039;touchMove&#039;,
+      ecName: &#039;mousemove&#039;
+    }, {
+      wxName: &#039;touchEnd&#039;,
+      ecName: &#039;mouseup&#039;
+    }, {
+      wxName: &#039;touchEnd&#039;,
+      ecName: &#039;click&#039;
+    }];
+
+    eventNames.forEach(name =&gt; {
+      this.event[name.wxName] = e =&gt; {
+        const touch = e.touches[0];
+        this.chart._zr.handler.dispatch(name.ecName, {
+          zrX: name.wxName === &#039;tap&#039; ? touch.clientX : touch.x,
+          zrY: name.wxName === &#039;tap&#039; ? touch.clientY : touch.y
+        });
+      };
+    });
+  }
+}</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ cyclomatic }} <br>
+    Length : {{ halstead.length }} <br>
+    Difficulty : {{ halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>

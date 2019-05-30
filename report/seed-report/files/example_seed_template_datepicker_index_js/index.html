@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - example/seed/template/datepicker/index.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">报告首页</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>example/seed/template/datepicker/index.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">代码可维护性 <a href="https://avandeursen.com/2014/08/29/think-twice-before-using-the-maintainability-index/"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="取值范围0-100；分值越高表示代码可维护性越强；0-10表示低可维护性，10-20表示中等可维护性，20-100表示高可维护性" data-original-title="代码可维护性，点击问号有详细说明"  data-container="body"></i></a></h2>
+      <p class="stat">65.04</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">代码行数 <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">431</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">难度  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="难度表示程序编写或阅读的难易程度，分值越高表示越难编写或阅读" data-original-title="难度" data-container="body"></i></a></h2>
+      <p class="stat">87.33</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">预估错误  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="根据Halstead模型得出的潜在bug数，点击问号有详细说明" data-original-title="预估bug数" data-container="body"></i></a></h2>
+      <p class="stat">3.95</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">函数权重</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">依据复杂度 <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="代码块中入口至出口间路径数，例：没有if语句，顺序执行，值为1；if语句一个条件，值为2。点击问号有详细说明" data-original-title="圈复杂度" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">依据逻辑代码行数  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">/**
+* 上滑
+* @param {object} e 事件对象
+* @returns {boolean} 布尔值
+*/
+export function isUpSlide(e) {
+  const { startX, startY } = this.data.gesture;
+  if (this.slideLock) {
+    const t = e.touches[ 0 ];
+    const deltaX = t.clientX - startX;
+    const deltaY = t.clientY - startY;
+    if (deltaY &lt; -60 &amp;&amp; deltaX &lt; 20 &amp;&amp; deltaX &gt; -20) {
+      this.slideLock = false;
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+/**
+* 下滑
+* @param {object} e 事件对象
+* @returns {boolean} 布尔值
+*/
+export function isDownSlide(e) {
+  const { startX, startY } = this.data.gesture;
+  if (this.slideLock) {
+    const t = e.touches[ 0 ];
+    const deltaX = t.clientX - startX;
+    const deltaY = t.clientY - startY;
+    if (deltaY &gt; 60 &amp;&amp; deltaX &lt; 20 &amp;&amp; deltaX &gt; -20) {
+      this.slideLock = false;
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+/**
+* 左滑
+* @param {object} e 事件对象
+* @returns {boolean} 布尔值
+*/
+export function isLeftSlide(e) {
+  const { startX, startY } = this.data.gesture;
+  if (this.slideLock) {
+    const t = e.touches[ 0 ];
+    const deltaX = t.clientX - startX;
+    const deltaY = t.clientY - startY;
+    if (deltaX &lt; -60 &amp;&amp; deltaY &lt; 20 &amp;&amp; deltaY &gt; -20) {
+      this.slideLock = false;
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+/**
+* 右滑
+* @param {object} e 事件对象
+* @returns {boolean} 布尔值
+*/
+export function isRightSlide(e) {
+  const { startX, startY } = this.data.gesture;
+  if (this.slideLock) {
+    const t = e.touches[ 0 ];
+    const deltaX = t.clientX - startX;
+    const deltaY = t.clientY - startY;
+
+    if (deltaX &gt; 60 &amp;&amp; deltaY &lt; 20 &amp;&amp; deltaY &gt; -20) {
+      this.slideLock = false;
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
+const conf = {
+  /**
+	 * 计算指定月份共多少天
+	 * @param {number} year 年份
+	 * @param {number} month  月份
+	 */
+  getThisMonthDays(year, month) {
+    return new Date(year, month, 0).getDate();
+  },
+  /**
+	 * 计算指定月份第一天星期几
+	 * @param {number} year 年份
+	 * @param {number} month  月份
+	 */
+  getFirstDayOfWeek(year, month) {
+    return new Date(Date.UTC(year, month - 1, 1)).getDay();
+  },
+  /**
+	 * 计算当前月份前后两月应占的格子
+	 * @param {number} year 年份
+	 * @param {number} month  月份
+	 */
+  calculateEmptyGrids(year, month) {
+    conf.calculatePrevMonthGrids.call(this, year, month);
+    conf.calculateNextMonthGrids.call(this, year, month);
+  },
+  /**
+	 * 计算上月应占的格子
+	 * @param {number} year 年份
+	 * @param {number} month  月份
+	 */
+  calculatePrevMonthGrids(year, month) {
+    const prevMonthDays = conf.getThisMonthDays(year, month - 1);
+    const firstDayOfWeek = conf.getFirstDayOfWeek(year, month);
+    let empytGrids = [];
+    if (firstDayOfWeek &gt; 0) {
+      const len = prevMonthDays - firstDayOfWeek;
+      for (let i = prevMonthDays; i &gt; len; i--) {
+        empytGrids.push(i);
+      }
+      this.setData({
+        &#039;datepicker.empytGrids&#039;: empytGrids.reverse(),
+      });
+    } else {
+      this.setData({
+        &#039;datepicker.empytGrids&#039;: null,
+      });
+    }
+  },
+  /**
+	 * 计算下月应占的格子
+	 * @param {number} year 年份
+	 * @param {number} month  月份
+	 */
+  calculateNextMonthGrids(year, month) {
+    const thisMonthDays = conf.getThisMonthDays(year, month);
+    const lastDayWeek = new Date(`${year}-${month}-${thisMonthDays}`).getDay();
+    let lastEmptyGrids = [];
+    if (+lastDayWeek !== 6) {
+      const len = 7 - (lastDayWeek + 1);
+      for (let i = 1; i &lt;= len; i++) {
+        lastEmptyGrids.push(i);
+      }
+      this.setData({
+        &#039;datepicker.lastEmptyGrids&#039;: lastEmptyGrids,
+      });
+    } else {
+      this.setData({
+        &#039;datepicker.lastEmptyGrids&#039;: null,
+      });
+    }
+  },
+  /**
+	 * 设置日历面板数据
+	 * @param {number} year 年份
+	 * @param {number} month  月份
+	 */
+  calculateDays(year, month, curDate) {
+    const { todayTimestamp } = this.data.datepicker;
+    let days = [];
+    let day;
+    let selectMonth;
+    let selectYear;
+    const thisMonthDays = conf.getThisMonthDays(year, month);
+    const selectedDay = this.data.datepicker.selectedDay;
+    if (selectedDay &amp;&amp; selectedDay.length) {
+      day = selectedDay[ 0 ].day;
+      selectMonth = selectedDay[ 0 ].month;
+      selectYear = selectedDay[ 0 ].year;
+    }
+    for (let i = 1; i &lt;= thisMonthDays; i++) {
+      days.push({
+        day: i,
+        choosed: curDate ? (i === curDate) : (year === selectYear &amp;&amp; month === selectMonth &amp;&amp; i === day),
+        year,
+        month,
+      });
+    }
+    days.map(item =&gt; {
+      const timestamp = new Date(`${item.year}-${item.month}-${item.day}`).getTime();
+      if (this.config.disablePastDay &amp;&amp; (timestamp - todayTimestamp &lt; 0)) {
+        item.disable = true;
+      }
+    });
+    const tmp = {
+      &#039;datepicker.days&#039;: days,
+    };
+    if (curDate) {
+      tmp[ &#039;datepicker.selectedDay&#039; ] = [ {
+        day: curDate,
+        choosed: true,
+        year,
+        month,
+      } ];
+    }
+    this.setData(tmp);
+  },
+  /**
+	 * 跳转至今天
+	 */
+  jumpToToday() {
+    const date = new Date();
+    const curYear = date.getFullYear();
+    const curMonth = date.getMonth() + 1;
+    const curDate = date.getDate();
+    conf.renderCalendar.call(this, curYear, curMonth, curDate);
+  },
+  /**
+   * 渲染日历
+   * @param {number} year
+   * @param {number} month
+   * @param {number} day
+   */
+  renderCalendar(year, month, day) {
+    const timestamp = new Date(`${year}-${month}-${day}`).getTime();
+    this.setData({
+      &#039;datepicker.curYear&#039;: year,
+      &#039;datepicker.curMonth&#039;: month,
+      &#039;datepicker.todayTimestamp&#039;: timestamp,
+    });
+    conf.calculateEmptyGrids.call(this, year, month);
+    conf.calculateDays.call(this, year, month, day);
+  },
+  /**
+	 * 初始化日历选择器
+	 * @param {number} curYear
+	 * @param {number} curMonth
+	 * @param {number} curDate
+	 */
+  init(curYear, curMonth, curDate) {
+    const self = _getCurrentPage();
+    const weeksCh = [ &#039;日&#039;, &#039;一&#039;, &#039;二&#039;, &#039;三&#039;, &#039;四&#039;, &#039;五&#039;, &#039;六&#039; ];
+    self.setData({
+      &#039;datepicker.weeksCh&#039;: weeksCh,
+      &#039;datepicker.showDatePicker&#039;: true,
+    });
+    if (!curYear &amp;&amp; !curMonth &amp;&amp; !curDate) return conf.jumpToToday.call(self);
+    conf.renderCalendar.call(self, curYear, curMonth, curDate);
+  },
+  /**
+	 * 点击输入框调起日历选择器
+	 * @param {object} e  事件对象
+	 */
+  showDatepicker(e) {
+    const value = e.detail.value;
+    if (value &amp;&amp; typeof value === &#039;string&#039;) {
+      const tmp = value.split(&#039;-&#039;);
+      conf.init(+tmp[ 0 ], +tmp[ 1 ], +tmp[ 2 ]);
+    } else {
+      conf.init();
+    }
+  },
+  /**
+	 * 当输入日期时
+	 * @param {object} e  事件对象
+	 */
+  onInputDate(e) {
+    const self = _getCurrentPage();
+    this.inputTimer &amp;&amp; clearTimeout(this.inputTimer);
+    this.inputTimer = setTimeout(() =&gt; {
+      const v = e.detail.value;
+      const _v = (v &amp;&amp; v.split(&#039;-&#039;)) || [];
+      const RegExpYear = /^\d{4}$/;
+      const RegExpMonth = /^(([0]?[1-9])|([1][0-2]))$/;
+      const RegExpDay = /^(([0]?[1-9])|([1-2][0-9])|(3[0-1]))$/;
+      if (_v &amp;&amp; _v.length === 3) {
+        if (RegExpYear.test(_v[ 0 ]) &amp;&amp; RegExpMonth.test(_v[ 1 ]) &amp;&amp; RegExpDay.test(_v[ 2 ])) {
+          conf.renderCalendar.call(self, +_v[ 0 ], +_v[ 1 ], +_v[ 2 ]);
+        }
+      }
+    }, 500);
+  },
+  /**
+	 * 计算当前日历面板月份的前一月数据
+	 */
+  choosePrevMonth() {
+    const { curYear, curMonth } = this.data.datepicker;
+    let newMonth = curMonth - 1;
+    let newYear = curYear;
+    if (newMonth &lt; 1) {
+      newYear = curYear - 1;
+      newMonth = 12;
+    }
+
+    conf.calculateDays.call(this, newYear, newMonth);
+    conf.calculateEmptyGrids.call(this, newYear, newMonth);
+
+    this.setData({
+      &#039;datepicker.curYear&#039;: newYear,
+      &#039;datepicker.curMonth&#039;: newMonth,
+    });
+  },
+  /**
+	 * 计算当前日历面板月份的后一月数据
+	 */
+  chooseNextMonth() {
+    const { curYear, curMonth } = this.data.datepicker;
+    let newMonth = curMonth + 1;
+    let newYear = curYear;
+    if (newMonth &gt; 12) {
+      newYear = curYear + 1;
+      newMonth = 1;
+    }
+    conf.calculateDays.call(this, newYear, newMonth);
+    conf.calculateEmptyGrids.call(this, newYear, newMonth);
+
+    this.setData({
+      &#039;datepicker.curYear&#039;: newYear,
+      &#039;datepicker.curMonth&#039;: newMonth
+    });
+  },
+  /**
+	 * 切换月份
+	 * @param {!object} e 事件对象
+	 */
+  handleCalendar(e) {
+    const handle = e.currentTarget.dataset.handle;
+    if (handle === &#039;prev&#039;) {
+      conf.choosePrevMonth.call(this);
+    } else {
+      conf.chooseNextMonth.call(this);
+    }
+  },
+  /**
+	 * 选择具体日期
+	 * @param {!object} e  事件对象
+	 */
+  tapDayItem(e) {
+    const { idx, disable } = e.currentTarget.dataset;
+    if (disable) return;
+    const config = this.config;
+    const { afterTapDay, onTapDay } = config;
+    const { curYear, curMonth, days } = this.data.datepicker;
+    const key = `datepicker.days[${idx}].choosed`;
+    const selectedValue = `${curYear}-${curMonth}-${days[ idx ].day}`;
+    if (this.config.type === &#039;timearea&#039;) {
+      if (onTapDay &amp;&amp; typeof onTapDay === &#039;function&#039;) {
+        config.onTapDay(this.data.datepicker.days[ idx ], e);
+        return;
+      };
+      this.setData({
+        [ key ]: !days[ idx ].choosed,
+      });
+    } else if (this.config.type === &#039;normal&#039; &amp;&amp; !days[ idx ].choosed) {
+      const prev = days.filter(item =&gt; item.choosed)[ 0 ];
+      const prevKey = prev &amp;&amp; `datepicker.days[${prev.day - 1}].choosed`;
+      if (onTapDay &amp;&amp; typeof onTapDay === &#039;function&#039;) {
+        config.onTapDay(days[ idx ], e);
+        return;
+      };
+      const data = {
+        [ key ]: true,
+        &#039;datepicker.selectedValue&#039;: selectedValue,
+        &#039;datepicker.selectedDay&#039;: [ days[ idx ] ],
+      };
+      if (prevKey) {
+        data[ prevKey ] = false;
+      }
+      this.setData(data);
+    }
+    if (afterTapDay &amp;&amp; typeof afterTapDay === &#039;function&#039;) {
+      config.afterTapDay(days[ idx ]);
+    };
+  },
+  /**
+	 * 关闭日历选择器
+	 */
+  closeDatePicker() {
+    this.setData({
+      &#039;datepicker.showDatePicker&#039;: false,
+    });
+  },
+  datepickerTouchstart(e) {
+    const t = e.touches[ 0 ];
+    const startX = t.clientX;
+    const startY = t.clientY;
+    this.slideLock = true; // 滑动事件加锁
+    this.setData({
+      &#039;gesture.startX&#039;: startX,
+      &#039;gesture.startY&#039;: startY
+    });
+  },
+  datepickerTouchmove(e) {
+    if (isLeftSlide.call(this, e)) {
+      conf.chooseNextMonth.call(this);
+    }
+    if (isRightSlide.call(this, e)) {
+      conf.choosePrevMonth.call(this);
+    }
+  },
+};
+
+function _getCurrentPage() {
+  const pages = getCurrentPages();
+  const last = pages.length - 1;
+  return pages[ last ];
+}
+
+/**
+ * 跳转至今天
+ */
+export const jumpToToday = () =&gt; {
+  const self = _getCurrentPage();
+  conf.jumpToToday.call(self);
+};
+
+export default (config = {}) =&gt; {
+  const self = _getCurrentPage();
+  if (!config.type) config.type = &#039;normal&#039;;
+  self.config = config;
+  self.setData({
+    datepicker: {
+      showDatePicker: false,
+      showInput: (config.showInput === true || config.showInput === undefined),
+      placeholder: config.placeholder || &#039;请选择日期&#039;,
+    }
+  });
+  self.datepickerTouchstart = conf.datepickerTouchstart.bind(self);
+  self.datepickerTouchmove = conf.datepickerTouchmove.bind(self);
+  self.showDatepicker = conf.showDatepicker.bind(self);
+  self.onInputDate = conf.onInputDate.bind(self);
+  self.closeDatePicker = conf.closeDatePicker.bind(self);
+  self.tapDayItem = conf.tapDayItem.bind(self);
+  self.handleCalendar = conf.handleCalendar.bind(self);
+};
+
+/**
+ * 获取已选择的日期
+*/
+export const getSelectedDay = () =&gt; {
+  const self = _getCurrentPage();
+  return self.data.datepicker.selectedDay;
+};</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ cyclomatic }} <br>
+    Length : {{ halstead.length }} <br>
+    Difficulty : {{ halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>
