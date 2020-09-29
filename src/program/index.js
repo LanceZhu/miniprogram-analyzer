@@ -2,6 +2,8 @@ const plato = require('plato')
 const fse = require('fs-extra')
 const path = require('path')
 
+const getUsedComponents = require('./html/component')
+
 const inspect = async (mpDir, reportDir, options = {}) => {
   const appJSONPath = path.join(mpDir, 'app.json')
   if (!fse.existsSync(appJSONPath)) {
@@ -32,9 +34,12 @@ const inspect = async (mpDir, reportDir, options = {}) => {
     })
   })
 
+  const usedComponents = await getUsedComponents(mpDir)
+
   const report = {
     pages: mpPages,
     hasCloudFunction,
+    components: usedComponents,
     plato: platoReport
   }
 
@@ -44,15 +49,6 @@ const inspect = async (mpDir, reportDir, options = {}) => {
 
   return report
 }
-
-// (async () => {
-//   const report = await inspect('/mnt/c/Users/29374/Desktop/repos/plato-mini-program-zh-CN/example/seed', '/mnt/c/Users/29374/Desktop/repos/plato-mini-program-zh-CN/report/seed', {
-//     platoOptions: {
-//       'recurse': true,
-//       'title': 'plato mini program'
-//     }
-//   })
-// })()
 
 module.exports = {
   inspect
