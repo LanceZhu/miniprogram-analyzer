@@ -40,4 +40,12 @@ const getUsedComponents = async (mpDir) => {
   return object.pick(components, tokens)
 }
 
+process.on('message', async message => {
+  const { options } = message
+  const usedComponents = await getUsedComponents(...options)
+
+  process.send(usedComponents)
+  process.exit()
+})
+
 module.exports = getUsedComponents

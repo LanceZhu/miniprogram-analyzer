@@ -1,8 +1,6 @@
-const plato = require('plato')
 const fse = require('fs-extra')
 const path = require('path')
-
-const getUsedComponents = require('./html/component')
+const { fork } = require('child_process')
 
 const inspect = async (mpDir, reportDir, options = {}) => {
   const appJSONPath = path.join(mpDir, 'app.json')
@@ -22,19 +20,43 @@ const inspect = async (mpDir, reportDir, options = {}) => {
   fse.ensureDirSync(outputDir)
   fse.emptyDirSync(outputDir)
 
-  const { platoOptions = {
-    recurse: true
-  } } = options
+  const getPlatoReport = new Promise((resolve, reject) => {
+    const childPlato = fork(require.resolve('./javascript/plato'))
+    childPlato.on('message', message => {
+      console.log(typeof message)
+      resolve({
+        message
+      })
+    })
 
-  const platoReport = await new Promise((resolve, reject) => {
     const files = [mpDir]
     const platoOutputDir = path.join(outputDir, 'plato')
-    plato.inspect(files, platoOutputDir, platoOptions, report => {
-      resolve(report)
+    const { platoOptions = {
+      recurse: true
+    } } = options
+
+    childPlato.send({
+      cmd: 'start',
+      options: [files, platoOutputDir, platoOptions]
     })
   })
 
-  const usedComponents = await getUsedComponents(mpDir)
+  const getUsedComponents = new Promise((resolve, reject) => {
+    const childGetUsedComponents = fork(require.resolve('./html/component'))
+    childGetUsedComponents.on('message', message => {
+      console.log(typeof message)
+      resolve({
+        message
+      })
+    })
+    childGetUsedComponents.send({
+      cmd: 'start',
+      options: [mpDir]
+    })
+  })
+
+  const reports = await Promise.all([getPlatoReport, getUsedComponents])
+  const [platoReport, usedComponents] = reports
 
   const report = {
     pages: mpPages,
